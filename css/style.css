@@ -1,0 +1,76 @@
+@import url("reset.css");
+:root {
+    --primary-color: #fff;
+    --top-bottom-color: #1D2641;
+    --primary-text-color: #000;
+    --top-bottom-text-color: #fff;
+    --placeholder-text-color: #c0c0c0;
+    --primary-font-family: "Montserrat", sans-serif;
+}
+header {
+    width: 100%;
+    max-width: 100%;
+    height: 188px;
+    background-color: var(--top-bottom-color);
+    display: flex;
+    flex-direction: row;
+}
+.header__logo-container {
+    margin-left: 5px;
+    margin-top: -17px;
+}
+.header__logo {
+    width: 316px;
+    height: 222px;
+}
+.header__main {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+}
+.header__nav a {
+    color: var(--top-bottom-text-color);
+    font-family: var(--primary-font-family);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23px;
+    height: 23px;
+}
+.header__nav a.fit {
+    width: 145px;
+}
+.header__nav a + a {
+    margin-left: 45px;
+}
+.header__nav a:hover {
+    border-bottom: 0.5px solid var(--top-bottom-text-color);
+}
+.header__search {
+    margin-left: 80px;
+    margin-top: 40px;
+}
+.header__input {
+    width: 375px;
+    height: 63.75px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: var(--placeholder-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 26px;
+    padding-left: 22px;
+}
+.header__search-icon {
+    position: relative;
+    left: 309.25px;
+    bottom: 53.875px;
+}
