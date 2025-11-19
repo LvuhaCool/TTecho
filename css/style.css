@@ -74,3 +74,39 @@ header {
     left: 309.25px;
     bottom: 53.875px;
 }
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+.slider__current-img {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.slider__back-btn, .slider__forward-btn {
+    position: relative;
+    top: 50%;
+    z-index: 1;
+}
+.slider__back-btn {
+    left: 15px;
+}
+.slider__forward-btn {
+    right: 15px;
+}
+.slider-dots {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+.slider-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 0.5px solid var(--primary-text-color);
+}
+.slider-dot + .slider-dot {
+    margin-left: 15px;
+}
