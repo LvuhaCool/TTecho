@@ -10,8 +10,6 @@ const sliderImages = [
     "./img/slider-second.jpg",
     "./img/slider-third.jpg",
     "./img/slider-fourth.webp",
-    "./img/slider-fifth.avif",
-    "./img/slider-sixth.jpg",
 ];
 let currentSliderIndex = 0;
 sliderBack.addEventListener("click", sliderEventHandlerBack);
