@@ -95,7 +95,7 @@ header {
     right: 15px;
 }
 .slider-dots {
-    margin-top: 10gitpx;
+    margin-top: 10;
     display: flex;
     flex-direction: row;
     justify-content: center;
