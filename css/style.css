@@ -37,27 +37,26 @@ header {
     color: var(--top-bottom-text-color);
     font-family: var(--primary-font-family);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 23px;
     height: 23px;
 }
 .header__nav a.fit {
-    width: 145px;
+    width: 200px;
 }
 .header__nav a + a {
-    margin-left: 45px;
+    margin-left: 150px;
 }
 .header__nav a:hover {
     border-bottom: 0.5px solid var(--top-bottom-text-color);
 }
 .header__search {
-    margin-left: 80px;
+    margin-left: 150px;
     margin-top: -40px;
     display: flex;
     align-items: center;
     position: relative;
-
 }
 .header__input {
     width: 375px;
@@ -126,3 +125,19 @@ header {
     margin-left: 15px;
 }
 /* Просто тестовый коммент, на ветке творится какой-то бред */
+@media screen and (max-width: 1515px) {
+    .header__nav a.fit {
+        width: 170px;
+    }
+    .header__nav a + a {
+        margin-left: 45px;
+    }
+    .header__search {
+        margin-left: 80px;
+    }
+}
+@media screen and (max-width: 1400) {
+    .header__nav a.fit {
+        width: 145px;
+    }
+}
