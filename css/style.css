@@ -53,7 +53,11 @@ header {
 }
 .header__search {
     margin-left: 80px;
-    margin-top: 40px;
+    margin-top: -40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
 }
 .header__input {
     width: 375px;
@@ -68,11 +72,17 @@ header {
     font-weight: 700;
     line-height: 26px;
     padding-left: 22px;
+    flex-grow: 1;
 }
 .header__search-icon {
-    position: relative;
-    left: 309.25px;
-    bottom: 53.875px;
+    position: absolute;
+    right: 10px;
+    /* flex-shrink: 0;
+    width: 56px;
+    height: 44px; */
+    top: 50%;
+    transform: translateY(-50%); 
+    cursor: pointer;
 }
 .slider {
     display: flex;
