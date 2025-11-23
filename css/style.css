@@ -16,6 +16,7 @@ header {
     flex-direction: row;
 }
 .header__logo-container {
+    display: block;
     margin-left: 5px;
     margin-top: -17px;
 }
@@ -41,9 +42,7 @@ header {
     font-weight: 700;
     line-height: 23px;
     height: 23px;
-}
-.header__nav a.fit {
-    width: 200px;
+    width: fit-content;
 }
 .header__nav a + a {
     margin-left: 150px;
@@ -73,7 +72,7 @@ header {
     padding-left: 22px;
     flex-grow: 1;
 }
-.header__search-icon {
+.header__search__icon {
     position: absolute;
     right: 10px;
     /* flex-shrink: 0;
@@ -124,11 +123,21 @@ header {
 .slider-dot + .slider-dot {
     margin-left: 15px;
 }
+.hamburger-menu {
+    display: none;
+    text-align: center;
+    margin: 46px auto;
+}
+.hamburger-menu__symbol {
+    text-align: center;
+}
+.hamburger-menu__btn {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 55px;
+}
 /* Просто тестовый коммент, на ветке творится какой-то бред */
-@media screen and (max-width: 1515px) {
-    .header__nav a.fit {
-        width: 170px;
-    }
+@media screen and (max-width: 1555px) {
     .header__nav a + a {
         margin-left: 45px;
     }
@@ -136,8 +145,48 @@ header {
         margin-left: 80px;
     }
 }
-@media screen and (max-width: 1400) {
-    .header__nav a.fit {
-        width: 145px;
+@media screen and (max-width: 1280px) {
+    .header__main {
+        margin-left: 0;
+    }
+    .header__search {
+        margin-left: 40px;
+    }
+}
+@media screen and (max-width: 1180px) {
+    .header__main {
+        flex-direction: column;
+        margin-left: 150px;
+    }
+    .header__nav + .header__search {
+        margin-top: 50px;
+    }
+    .header__nav {
+        margin-top: 25px;
+    }
+    .header__search {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 950px) {
+    .header__main {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+        height: 176px;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    .header__logo-container {
+        display: none;
+    }
+    .header__main {
+        display: none;
+    }
+    .header__search {
+        display: none;
     }
 }
