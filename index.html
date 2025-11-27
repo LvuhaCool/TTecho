@@ -12,10 +12,23 @@
 <body>
     <header>
         <div class="hamburger-menu">
-            <!-- Добавить лого -->
-            <div class="hamburger-menu__symbol">
-                <button class="hamburger-menu__btn">&#9776;</button>
+            <div class="hamburger-menu__little-container">
+                <div class="hamburger-menu__logo">
+                    <img src="./img/header-logo.png" alt="TTecho" class="hamburger-menu__logo-img">
+                </div>
+                <div class="hamburger-menu__symbol">
+                    <button class="hamburger-menu__btn">&#9776;</button>
+                </div>
             </div>
+            <nav class="hamburger-menu__nav">
+                <div class="hamburger-menu__search">
+                    <input type="text" class="hamburger-menu__input" placeholder="Ищите товары здесь...">
+                    <img src="./img/search-icon.png" class="hamburger-menu__search-icon">
+                </div>
+                <a href="#!">Главная</a>
+                <a href="#!">Коллекция</a>
+                <a href="#!" class="fit">Связаться с нами</a>
+            </nav>
         </div>
         <div class="header__logo-container">
             <img src="./img/header-logo.png" alt="TTecho" class="header__logo">
@@ -28,7 +41,7 @@
             </nav>
             <div class="header__search">
                 <input type="text" class="header__input" placeholder="Ищите товары здесь...">
-                <img src="./img/search-icon.png" class="header__search__icon">
+                <img src="./img/search-icon.png" class="header__search-icon">
             </div>
         </div>
     </header>

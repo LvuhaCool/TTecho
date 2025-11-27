@@ -88,7 +88,4 @@ function sliderForwardFun() {
     }
     currentImg.src = sliderImages[currentSliderIndex];
 }
-setTimeout(() => {
-    loopFunction(5000, sliderForwardFun);
-}, 5000);
 resetSliderTimer();

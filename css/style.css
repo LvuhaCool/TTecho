@@ -72,7 +72,7 @@ header {
     padding-left: 22px;
     flex-grow: 1;
 }
-.header__search__icon {
+.header__search-icon {
     position: absolute;
     right: 10px;
     /* flex-shrink: 0;
@@ -128,8 +128,12 @@ header {
     text-align: center;
     margin: 46px auto;
 }
+.hamburger-menu__logo {
+    display: inline-block;
+}
 .hamburger-menu__symbol {
     text-align: center;
+    display: inline-block;
 }
 .hamburger-menu__btn {
     color: var(--primary-color);
