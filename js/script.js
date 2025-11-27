@@ -12,15 +12,26 @@ const sliderImages = [
     "./img/slider-fourth.webp",
 ];
 let currentSliderIndex = 0;
+let sliderTimer;
+function resetSliderTimer () {
+    clearTimeout(sliderTimer);
+    sliderTimer = setTimeout(() => {
+        sliderForwardFun()
+        dotChanging()
+        resetSliderTimer();
+    }, 5000)
+}
 sliderBack.addEventListener("click", sliderEventHandlerBack);
 function sliderEventHandlerBack() {
     sliderBackFun();
     dotChanging();
+    resetSliderTimer();
 }
 sliderForward.addEventListener("click", sliderEventHandlerForward);
 function sliderEventHandlerForward() {
     sliderForwardFun();
     dotChanging();
+    resetSliderTimer();
 }
 // Точки для слайдера, меняющие цвет
 function addSliderDots() {
@@ -58,9 +69,11 @@ sliderDotsAsArray.forEach((dot, index) => {
             currentSliderIndex = index;
             currentImg.src = sliderImages[currentSliderIndex];
             dotChanging();
+            resetSliderTimer();
         }, 75);
     });
 });
+// Автоматика слайдера
 function sliderBackFun() {
     currentSliderIndex = currentSliderIndex - 1;
     if (currentSliderIndex < 0) {
@@ -75,14 +88,7 @@ function sliderForwardFun() {
     }
     currentImg.src = sliderImages[currentSliderIndex];
 }
-function loopFunction(delay, callback) {
-    var loop = function() {
-        callback();
-        setTimeout(loop, delay);
-        dotChanging();
-    };
-    loop();
-};
 setTimeout(() => {
     loopFunction(5000, sliderForwardFun);
 }, 5000);
+resetSliderTimer();
