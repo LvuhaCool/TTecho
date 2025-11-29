@@ -52,7 +52,6 @@ header {
 }
 .header__search {
     margin-left: 150px;
-    margin-top: -40px;
     display: flex;
     align-items: center;
     position: relative;
@@ -87,6 +86,7 @@ header {
     flex-direction: row;
     position: relative;
     z-index: 1;
+    margin-top: -40px;
 }
 .slider__current-img {
     min-width: 100%;
@@ -272,5 +272,11 @@ header {
     }
     .header__search {
         display: none;
+    }
+    .slider {
+        margin-top: -40px;
+    }
+    .slider.active {
+        margin-top: 0;
     }
 }

@@ -7,10 +7,12 @@ const sliderDotContainer = document.querySelector(".slider-dots");
 // Для меню
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
+const sliderMargin = document.querySelector(".slider");
 // Адаптивное меню-гамбургер
 hamburgerBtn.addEventListener("click", hamburgerFun);
 function hamburgerFun() {
     adaptiveNav.classList.toggle("visible");
+    sliderMargin.classList.toggle("active");
 }
 // Слайдер
 const sliderImages = [
