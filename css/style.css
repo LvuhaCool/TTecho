@@ -125,7 +125,97 @@ header {
 }
 .hamburger-menu {
     display: none;
-    z-index: 100;
+    text-align: center;
+    width: 100%;
+}
+.hamburger-menu__logo {
+    margin-top: -30px;
+}
+.hamburger-menu__btn {
+    color: var(--primary-color);
+    font-size: 45px;
+    margin-top: -20px;
+    width: 100%;
+}
+.hamburger-menu__btn:hover {
+    color: var(--top-bottom-color);
+    background-color: var(--primary-color);
+    border-radius: 7px;
+}
+.hamburger-menu__nav {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+.hamburger-menu__nav.visible {
+    opacity: 1;
+    max-height: 500px;
+}
+.hamburger-menu__search {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+.hamburger-menu__input {
+    width: 375px;
+    height: 63.75px;
+    border: 0.5px solid #888;
+    outline: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: var(--placeholder-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 26px;
+    padding-left: 22px;
+    flex-grow: 1;
+}
+.hamburger-menu__search-icon {
+    position: absolute;
+    right: calc(25.39% + 10px);
+    /* flex-shrink: 0;
+    width: 56px;
+    height: 44px; */
+    top: 50%;
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
+.hamburger-menu__links-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hamburger-menu__nav a {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 23px;
+    height: 23px;
+    width: 200px;
+    border-radius: 7px;
+    align-self: center;
+    text-align: center;
+    height: 35px;
+    padding-top: 5px;
+}
+.hamburger-menu__nav a + a {
+    margin-top: 20px;
+}
+.hamburger-menu__nav a:hover {
+    transition: 0.3s all ease-in-out;
+    color: var(--primary-color);
+    background-color: var(--top-bottom-color);
 }
 /* Просто тестовый коммент, на ветке творится какой-то бред */
 @media screen and (max-width: 1555px) {
@@ -173,8 +263,6 @@ header {
     }
     .hamburger-menu {
         display: block;
-        text-align: center;
-        width: 100%;
     }
     .header__logo-container {
         display: none;

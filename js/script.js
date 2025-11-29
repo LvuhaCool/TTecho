@@ -4,6 +4,14 @@ const currentImg = document.querySelector(".slider__current-img");
 const sliderBack = document.querySelector(".slider__back-btn");
 const sliderForward = document.querySelector(".slider__forward-btn");
 const sliderDotContainer = document.querySelector(".slider-dots");
+// Для меню
+const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
+const adaptiveNav = document.querySelector(".hamburger-menu__nav");
+// Адаптивное меню-гамбургер
+hamburgerBtn.addEventListener("click", hamburgerFun);
+function hamburgerFun() {
+    adaptiveNav.classList.toggle("visible");
+}
 // Слайдер
 const sliderImages = [
     "./img/slider-first.jpg",
