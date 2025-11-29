@@ -125,20 +125,7 @@ header {
 }
 .hamburger-menu {
     display: none;
-    text-align: center;
-    margin: 46px auto;
-}
-.hamburger-menu__logo {
-    display: inline-block;
-}
-.hamburger-menu__symbol {
-    text-align: center;
-    display: inline-block;
-}
-.hamburger-menu__btn {
-    color: var(--primary-color);
-    font-weight: 700;
-    font-size: 55px;
+    z-index: 100;
 }
 /* Просто тестовый коммент, на ветке творится какой-то бред */
 @media screen and (max-width: 1555px) {
@@ -180,9 +167,14 @@ header {
 @media screen and (max-width: 768px) {
     header {
         height: 176px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .hamburger-menu {
         display: block;
+        text-align: center;
+        width: 100%;
     }
     .header__logo-container {
         display: none;
