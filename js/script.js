@@ -9,11 +9,11 @@ const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
 const sliderMargin = document.querySelector(".slider");
 // Адаптивное меню-гамбургер
-hamburgerBtn.addEventListener("click", hamburgerFun);
-function hamburgerFun() {
-    adaptiveNav.classList.toggle("visible");
+let hamburgerFun = () => {
     sliderMargin.classList.toggle("active");
+    adaptiveNav.classList.toggle("visible");
 }
+hamburgerBtn.addEventListener("click", hamburgerFun);
 // Слайдер
 const sliderImages = [
     "./img/slider-first.jpg",

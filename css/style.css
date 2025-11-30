@@ -28,11 +28,15 @@ header {
     display: flex;
     flex-direction: row;
     margin-left: 60px;
+    align-items: center;
+    height: 100%;
 }
 .header__nav {
     display: flex;
     flex-direction: row;
-    margin-top: 60px;
+    margin-top: 0;
+    align-items: center;
+    height: 100%;
 }
 .header__nav a {
     color: var(--top-bottom-text-color);
@@ -55,6 +59,7 @@ header {
     display: flex;
     align-items: center;
     position: relative;
+    height: 100%;
 }
 .header__input {
     width: 375px;
@@ -247,6 +252,7 @@ header {
     }
     .header__search {
         margin-left: 0;
+        margin-bottom: 15px;
     }
 }
 @media screen and (max-width: 950px) {
@@ -275,8 +281,17 @@ header {
     }
     .slider {
         margin-top: -40px;
+        transition: margin-top 0.1s ease-out;
     }
     .slider.active {
         margin-top: 0;
+    }
+}
+@media screen and (min-width: 769px) {
+    .hamburger-menu__nav {
+        display: none !important;
+    }
+    .slider {
+        margin-top: 0 !important;
     }
 }
