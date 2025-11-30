@@ -140,7 +140,7 @@ header {
     color: var(--primary-color);
     font-size: 45px;
     margin-top: -20px;
-    width: 100%;
+    width: 30%;
 }
 .hamburger-menu__btn:hover {
     color: var(--top-bottom-color);
