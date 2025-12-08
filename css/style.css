@@ -286,6 +286,16 @@ header {
     .slider.active {
         margin-top: 0;
     }
+    .slider__back-btn, .slider__forward-btn {
+        top: 35%;
+        width: 105px;
+        height: 105px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .slider__back-btn, .slider__forward-btn {
+        top: 25%;
+    }
 }
 @media screen and (min-width: 769px) {
     .hamburger-menu__nav {
