@@ -185,9 +185,6 @@ header {
 .hamburger-menu__search-icon {
     position: absolute;
     right: calc(25.39% + 10px);
-    /* flex-shrink: 0;
-    width: 56px;
-    height: 44px; */
     top: 50%;
     transform: translateY(-50%); 
     cursor: pointer;
@@ -222,7 +219,61 @@ header {
     color: var(--primary-color);
     background-color: var(--top-bottom-color);
 }
-/* Просто тестовый коммент, на ветке творится какой-то бред */
+.about {
+    margin-left: 17px;
+    margin-top: 36px;
+}
+.about__heading h1 {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 39px;
+    text-align: center;
+}
+.about__text {
+    margin-top: 15px;
+    width: 80%;
+    margin-left: 10%;
+    max-height: 180px;
+}
+.about__text_less {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+}
+.about__unfold, .about__fold {
+    position: relative;
+}
+.about__unfold {
+    top: 4px;
+}
+.about__unfold.invisible {
+    display: none;
+}
+.about__text_more {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-out, opacity 0.3s ease-out;
+}
+.about__text_more.expanded {
+    height: 60px;
+    opacity: 1;
+}
+footer {
+    width: 100%;
+    height: 555px;
+    background-color: #888;
+    z-index: 10;
+}
 @media screen and (max-width: 1555px) {
     .header__nav a + a {
         margin-left: 45px;

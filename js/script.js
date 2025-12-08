@@ -8,6 +8,10 @@ const sliderDotContainer = document.querySelector(".slider-dots");
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
 const sliderMargin = document.querySelector(".slider");
+// Для секции "О нас"
+const moreTextParagraph = document.querySelector(".about__text_more");
+const showMore = document.querySelector(".about__unfold");
+const showLess = document.querySelector(".about__fold");
 // Адаптивное меню-гамбургер
 let hamburgerFun = () => {
     sliderMargin.classList.toggle("active");
@@ -99,3 +103,14 @@ function sliderForwardFun() {
     currentImg.src = sliderImages[currentSliderIndex];
 }
 resetSliderTimer();
+
+showMore.addEventListener("click", unfoldFunction)
+function unfoldFunction() {
+    moreTextParagraph.classList.add("expanded");
+    showMore.classList.add("invisible");
+}
+showLess.addEventListener("click", foldFunction)
+function foldFunction() {
+    moreTextParagraph.classList.remove("expanded");
+    showMore.classList.remove("invisible");
+}
