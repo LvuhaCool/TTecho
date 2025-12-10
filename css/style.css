@@ -235,7 +235,6 @@ header {
     margin-top: 15px;
     width: 80%;
     margin-left: 10%;
-    max-height: 180px;
 }
 .about__text_less {
     color: var(--primary-text-color);
@@ -259,13 +258,13 @@ header {
     font-size: 18px;
     font-weight: 700;
     line-height: 30px;
-    height: 0;
+    max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: height 0.5s ease-out, opacity 0.3s ease-out;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
 }
 .about__text_more.expanded {
-    height: 60px;
+    max-height: 1111px;
     opacity: 1;
 }
 footer {
@@ -310,6 +309,10 @@ footer {
     .header__main {
         margin-left: 0;
     }
+    .about__text {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 @media screen and (max-width: 768px) {
     header {
@@ -341,6 +344,9 @@ footer {
         top: 35%;
         width: 105px;
         height: 105px;
+    }
+    .about__text p {
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 670px) {
