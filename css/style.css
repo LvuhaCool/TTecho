@@ -406,6 +406,40 @@ footer {
         grid-template-columns: repeat(2, 206.25px);
         gap: 25px;
     }
+    .card {
+        width: 144.375px;
+        height: 183.75px;
+        box-shadow: 6.5px 6.5px 6.5px 0px #888;
+    }
+    .card__picture-wrapper {
+        padding-top: 11.2px;
+    }
+    .card__picture {
+        width: 113.4px;
+        height: 116.55px;
+    }
+    .card__content {
+        padding-top: 9.45px;
+    }
+    .card__name {
+        font-size: 14px;
+    }
+    .card__prices {
+        padding-top: 2.8px;
+    }
+    .card__price.active {
+        font-size: 12px;
+    }
+    .card__price.inactive {
+        padding-top: 1.05px;
+        font-size: 10px;
+    }
+    .card__price.active + .card__price.inactive {
+        margin-left: 17.5px;
+    }
+    .card:hover ~ .cards {
+        gap: 25px;
+    }
 }
 @media screen and (max-width: 768px) {
     header {
