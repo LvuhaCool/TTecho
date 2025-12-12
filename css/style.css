@@ -403,7 +403,7 @@ footer {
 }
 @media screen and (max-width: 900px) {
     .cards {
-        grid-template-columns: repeat(2, 206.25px);
+        grid-template-columns: repeat(2, 175.3125px);
         gap: 25px;
     }
     .card {
@@ -438,7 +438,7 @@ footer {
         margin-left: 21.25px;
     }
     .card:hover ~ .cards {
-        gap: 25px;
+        gap: 24.5px;
     }
 }
 @media screen and (max-width: 768px) {
