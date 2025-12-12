@@ -407,35 +407,35 @@ footer {
         gap: 25px;
     }
     .card {
-        width: 144.375px;
-        height: 183.75px;
+        width: 175.3125px;
+        height: 223.125px;
         box-shadow: 6.5px 6.5px 6.5px 0px #888;
     }
     .card__picture-wrapper {
-        padding-top: 11.2px;
+        padding-top: 13.6px;
     }
     .card__picture {
-        width: 113.4px;
-        height: 116.55px;
+        width: 137.7px;
+        height: 141.525px;
     }
     .card__content {
-        padding-top: 9.45px;
+        padding-top: 11.475px;
     }
     .card__name {
         font-size: 14px;
     }
     .card__prices {
-        padding-top: 2.8px;
+        padding-top: 6px;
     }
     .card__price.active {
-        font-size: 12px;
+        font-size: 12.5px;
     }
     .card__price.inactive {
-        padding-top: 1.05px;
-        font-size: 10px;
+        padding-top: 1.275px;
+        font-size: 10.5px;
     }
     .card__price.active + .card__price.inactive {
-        margin-left: 17.5px;
+        margin-left: 21.25px;
     }
     .card:hover ~ .cards {
         gap: 25px;
