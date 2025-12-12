@@ -404,6 +404,7 @@ footer {
 @media screen and (max-width: 900px) {
     .cards {
         grid-template-columns: repeat(2, 206.25px);
+        gap: 25px;
     }
 }
 @media screen and (max-width: 768px) {
