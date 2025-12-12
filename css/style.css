@@ -223,11 +223,11 @@ header {
     margin-top: 60px;
 }
 .cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 45px;
+   display: grid;
+   grid-template-columns: repeat(6, 206.25px);
+   gap: 35.75px;
+   padding-top: 45px;
+   justify-content: center;
 }
 .card {
     width: 206.25px;
@@ -245,10 +245,10 @@ header {
     opacity: 0.95;
     cursor: pointer;
 }
-.card:hover ~ .card + .card {
-    margin-left: 35.25px;
+.card:hover ~ .cards {
+    gap: 35.25px;
 }
-.card:hover ~ .popular-goods_smal {
+.card:hover ~ .popular-goods_small {
     margin-top: 59.5px;
 }
 .card__picture-wrapper {
@@ -299,9 +299,6 @@ header {
 }
 .card__price.active + .card__price.inactive {
     margin-left: 25px;
-}
-.card + .card {
-    margin-left: 35.75px;
 }
 .about {
     margin-left: 17px;
@@ -357,6 +354,12 @@ footer {
     background-color: #888;
     z-index: 10;
 }
+@media screen and (max-width: 1616px) {
+    .cards {
+        grid-template-columns: repeat(3, 206.25px);
+        gap: 35px 75px;
+    }
+}
 @media screen and (max-width: 1555px) {
     .header__nav a + a {
         margin-left: 45px;
@@ -396,6 +399,11 @@ footer {
     .about__text {
         width: 100%;
         margin-left: 0;
+    }
+}
+@media screen and (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 206.25px);
     }
 }
 @media screen and (max-width: 768px) {
