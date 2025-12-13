@@ -103,7 +103,7 @@ function sliderForwardFun() {
     currentImg.src = sliderImages[currentSliderIndex];
 }
 resetSliderTimer();
-
+// Гармошка для описания "О нас"
 showMore.addEventListener("click", unfoldFunction)
 function unfoldFunction() {
     moreTextParagraph.classList.add("expanded");

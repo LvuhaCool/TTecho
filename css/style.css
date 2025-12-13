@@ -220,14 +220,101 @@ header {
     background-color: var(--top-bottom-color);
 }
 .popular-goods_small {
-    margin-top: 60px;
+    margin-top: 45px;
+}
+.popular-goods_small__heading {
+    display: flex;
+    flex-direction: row;
+    padding-right: 104px;
+    padding-bottom: 72px;
+    padding-left: 104px;
+}
+.popular-goods_small__main-heading {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0px;
+}
+.popular-accordion {
+    position: relative;
+    margin-left: 24.5vw;
+}
+.popular-accordion h2 {
+    color: rgb(33, 33, 33);
+    font-family: var(--primary-font-family);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+}
+.popular-accordion h2 {
+    margin-top: 3.5px;
+    height: 37px;
+}
+.popular-accordion h2 img {
+    width: 24px;
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 3.5px;
+}
+.popular-accordion h2, .popular-accordion h2 img {
+    cursor: pointer;
+}
+.popular-accordion h2:hover ~ .popular-accordion__show-hide {
+    opacity: 1;
+}
+.popular-accordion h2:hover ~ .popular-accordion__show-hide .popular-accordion__option {
+    opacity: 1;
+    color: var(--primary-color);
+}
+.popular-accordion__show-hide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--top-bottom-color);
+    color: var(--primary-color);
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    padding-top: 12px;
+    padding-left: 15px;
+    left: 25px;
+    top: 1px;
+    width: 235px;
+    height: 125px;
+    border: none;
+    border-radius: 6px;
+    z-index: 100;
+}
+.popular-accordion__show-hide, .popular-accordion__option {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+.popular-accordion__option {
+    z-index: 1000;
+}
+.popular-accordion__show-hide::before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid var(--top-bottom-color);
+    top: -8px;
+    left: 151px;
+}
+.popular-accordion__show-hide .popular-accordion__option + .popular-accordion__option {
+    margin-top: 4px;
 }
 .cards {
    display: grid;
    grid-template-columns: repeat(6, 206.25px);
    gap: 35.75px;
-   padding-top: 45px;
    justify-content: center;
+   z-index: 1;
+   margin-top: -130px;
 }
 .card {
     width: 206.25px;
@@ -305,7 +392,7 @@ header {
     margin-left: 17px;
     margin-top: 55px;
 }
-.about__heading h1, .popular-goods_small__heading h1 {
+.about__heading h1 {
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
     font-size: 33px;
