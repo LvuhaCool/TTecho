@@ -229,13 +229,17 @@ header {
     padding-bottom: 72px;
     padding-left: 104px;
 }
-.popular-goods_small__main-heading {
+.popular-goods_small__main-heading, .popular-goods_small__main-heading--sub {
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
     font-size: 36px;
     font-weight: 700;
     line-height: 39px;
     letter-spacing: 0px;
+}
+.popular-goods_small__main-heading--sub {
+    display: none;
+    border-bottom: 1px solid var(--primary-text-color);
 }
 .popular-accordion {
     position: relative;
@@ -248,8 +252,6 @@ header {
     font-weight: 700;
     line-height: 32px;
     letter-spacing: 0px;
-}
-.popular-accordion h2 {
     margin-top: 3.5px;
     height: 37px;
 }
@@ -307,6 +309,23 @@ header {
 }
 .popular-accordion__show-hide .popular-accordion__option + .popular-accordion__option {
     margin-top: 4px;
+}
+.whole-catalogue {
+    margin-left: 8vw;
+    padding-top: 3px;
+}
+.whole-catalogue a h2 {
+    color: rgb(33, 33, 33);
+    font-family: var(--primary-font-family);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0px;
+    border-bottom: 1px solid rgb(33, 33, 33);
+    transition: opacity 0.1s linear;
+}
+.whole-catalogue a h2:hover {
+    opacity: 0.9;
 }
 .cards {
    display: grid;
@@ -456,12 +475,28 @@ footer {
         margin-left: 80px;
     }
 }
+@media screen and (max-width: 1415px) {
+    .popular-accordion {
+        margin-left: 15vw;
+    }
+}
 @media screen and (max-width: 1280px) {
     .header__main {
         margin-left: 0;
     }
     .header__search {
         margin-left: 40px;
+    }
+}
+@media screen and (max-width: 1234px) {
+    .popular-goods_small__heading {
+        flex-wrap: wrap;
+    }
+    .popular-accordion {
+        margin-left: 8vw;
+    }
+    .whole-catalogue {
+        margin-left: 4vw;
     }
 }
 @media screen and (max-width: 1180px) {
@@ -478,6 +513,15 @@ footer {
     .header__search {
         margin-left: 0;
         margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 1078px) {
+    .popular-goods_small__main-heading {
+        margin-left: 20vw;
+    }
+    .whole-catalogue {
+        margin-top: -115px;
+        margin-left: 23vw;
     }
 }
 @media screen and (max-width: 950px) {
@@ -527,6 +571,30 @@ footer {
     }
     .card:hover ~ .cards {
         gap: 24.5px;
+    }
+}
+@media screen and (max-width: 829px) {
+    .popular-goods_small__heading {
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+    .popular-goods_small__main-heading {
+        display: none;
+    }
+    .popular-goods_small__main-heading--sub {
+        margin-left: 5vw;
+        font-size: 30px;
+        display: block;
+    }
+    .popular-accordion {
+        margin-left: 20vw;
+    }
+    .popular-accordion h2 {
+        font-size: 22px;
+    }
+    .whole-catalogue {
+        display: none;
     }
 }
 @media screen and (max-width: 768px) {
@@ -580,6 +648,9 @@ footer {
     }
     .hamburger-menu__search-icon {
         right: 15%;
+    }
+    .popular-goods_small__main-heading--sub {
+        margin-left: 60px;
     }
 }
 @media screen and (min-width: 769px) {
