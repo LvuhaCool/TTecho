@@ -12,6 +12,9 @@ const sliderMargin = document.querySelector(".slider");
 const moreTextParagraph = document.querySelector(".about__text_more");
 const showMore = document.querySelector(".about__unfold");
 const showLess = document.querySelector(".about__fold");
+// Для кнопки "показать еще" на главной странице
+const showMoreCardsBtn = document.querySelector(".cards__show-more-btn");
+const cardsContainer = document.querySelector(".cards");
 // Адаптивное меню-гамбургер
 let hamburgerFun = () => {
     sliderMargin.classList.toggle("active");
@@ -113,4 +116,23 @@ showLess.addEventListener("click", foldFunction)
 function foldFunction() {
     moreTextParagraph.classList.remove("expanded");
     showMore.classList.remove("invisible");
+}
+// Функция кнопки "еще" на главной
+showMoreCardsBtn.addEventListener("click", showMoreCardsFun);
+function showMoreCardsFun() {
+    const cardsSnippet = `<div class="card">
+                    <div class="card__picture-wrapper">
+                        <img src="./img/tenergy-test-good.png" alt="Tenergy 05" class="card__picture">
+                    </div>
+                    <div class="card__content">
+                        <span class="card__name">Butterfly Tenergy 05</span>
+                        <div class="card__prices">
+                            <div class="card__price active">5000₽</div>
+                            <div class="card__price inactive">6000₽</div>
+                        </div>
+                    </div>
+                </div>`;
+    for (i = 0; i < 12; i++) {
+        cardsContainer.insertAdjacentHTML("beforeend", cardsSnippet);
+    }
 }
