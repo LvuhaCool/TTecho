@@ -48,13 +48,25 @@
     <main>
         <section class="slider">
             <button class="slider__back-btn"><img src="./img/back-fold.png" alt="Назад" class="slider__back-img" onclick="dotChanging()"></button>
-            <img src="./img/slider-first.jpg" alt="Картинка" class="slider__current-img">
+            <img src="./img/slider-images/first.jpg" alt="Картинка" class="slider__current-img">
             <button class="slider__forward-btn"><img src="./img/back-fold.png" alt="Вперед" class="slider__forward-img" onclick="dotChanging()"></button>
         </section>
         <section class="slider-dots"></section>
         <section class="popular-goods_small">
             <div class="popular-goods_small__heading">
-                <h1>Популярные товары</h1>
+                <h2>Каталог</h2>
+                <div class="popular-accordion">
+                    <h2>Популярное<img src="./img/main-page-popular-unfold.png"></h2>
+                    <div class="popular-acccordion__show-hide">
+                        <span class="popular-accordion__option">Основания</span>
+                        <span class="popular-accordion__option">Накладки</span>
+                        <span class="popular-accordion__option">Обувь</span>
+                        <span class="popular-accordion__option">Спортивная форма</span>
+                    </div>
+                </div>
+                <div class="whole-catalogue">
+                    <a href="./pages/catalogue.html"><h2>Показать полный каталог</h2></a>
+                </div>
             </div>
             <div class="cards">
                 <div class="card">

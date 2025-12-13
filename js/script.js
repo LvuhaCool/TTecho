@@ -20,10 +20,10 @@ let hamburgerFun = () => {
 hamburgerBtn.addEventListener("click", hamburgerFun);
 // Слайдер
 const sliderImages = [
-    "./img/slider-first.jpg",
-    "./img/slider-second.jpg",
-    "./img/slider-third.jpg",
-    "./img/slider-fourth.webp",
+    "./img/slider-images/first.jpg",
+    "./img/slider-images/second.jpg",
+    "./img/slider-images/third.jpg",
+    "./img/slider-images/fourth.webp",
 ];
 let currentSliderIndex = 0;
 let sliderTimer;
