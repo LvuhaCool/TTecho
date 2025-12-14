@@ -12,6 +12,10 @@ const sliderMargin = document.querySelector(".slider");
 const moreTextParagraph = document.querySelector(".about__text_more");
 const showMore = document.querySelector(".about__unfold");
 const showLess = document.querySelector(".about__fold");
+// Для отображения аккордеона на кнопке "Популярное"
+const accordionTriggerText = document.querySelector("#accordionHeading");
+const accordionContainer = document.querySelector(".popular-accordion__show-hide");
+const accordionOptions = document.querySelectorAll(".popular-accordion__option");
 // Для кнопки "показать еще" на главной странице
 const showMoreCardsBtn = document.querySelector(".cards__show-more-btn");
 const cardsContainer = document.querySelector(".cards");
@@ -117,6 +121,23 @@ function foldFunction() {
     moreTextParagraph.classList.remove("expanded");
     showMore.classList.remove("invisible");
 }
+// Аккордеон для популярных категорий товаров
+const accordionFirstFun = () => {
+    accordionContainer.classList.toggle("visible");
+    accordionOptions.forEach(element => {
+        element.classList.toggle("visible");
+    });
+}
+const accordionSecondFun = () => {
+    accordionContainer.classList.toggle("visible");
+    accordionOptions.forEach(element => {
+        element.classList.toggle("visible");
+    });
+}
+accordionTriggerText.addEventListener("mouseenter", accordionFirstFun);
+accordionTriggerText.addEventListener("mouseleave", accordionFirstFun);
+accordionContainer.addEventListener("mouseenter", accordionFirstFun);
+accordionContainer.addEventListener("mouseleave", accordionFirstFun);
 // Функция кнопки "еще" на главной
 showMoreCardsBtn.addEventListener("click", showMoreCardsFun);
 function showMoreCardsFun() {

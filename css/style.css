@@ -79,9 +79,6 @@ header {
 .header__search-icon {
     position: absolute;
     right: 10px;
-    /* flex-shrink: 0;
-    width: 56px;
-    height: 44px; */
     top: 50%;
     transform: translateY(-50%); 
     cursor: pointer;
@@ -261,16 +258,6 @@ header {
     margin-top: 8px;
     margin-left: 3.5px;
 }
-.popular-accordion h2, .popular-accordion h2 img {
-    cursor: pointer;
-}
-.popular-accordion h2:hover ~ .popular-accordion__show-hide {
-    opacity: 1;
-}
-.popular-accordion h2:hover ~ .popular-accordion__show-hide .popular-accordion__option {
-    opacity: 1;
-    color: var(--primary-color);
-}
 .popular-accordion__show-hide {
     display: flex;
     flex-direction: column;
@@ -288,13 +275,31 @@ header {
     border: none;
     border-radius: 6px;
     z-index: 100;
+    visibility: hidden;
+}
+.popular-accordion__show-hide:hover {
+    opacity: 1;
+    visibility: visible;
+}
+.popular-accordion__show-hide:hover ~ .popular-accordion__option {
+    opacity: 1;
+    visibility: visible;
+}
+.popular-accordion__show-hide.visible {
+    opacity: 1;
+    visibility: visible;
 }
 .popular-accordion__show-hide, .popular-accordion__option {
     opacity: 0;
-    transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
 }
 .popular-accordion__option {
     z-index: 1000;
+    visibility: hidden;
+}
+.popular-accordion__option.visible {
+    opacity: 1;
+    visibility: visible;
 }
 .popular-accordion__show-hide::before {
     content: " ";
@@ -476,10 +481,86 @@ header {
     color: var(--top-bottom-text-color);
 }
 footer {
+    padding-left: 100px;
+    padding-bottom: 15px;
     width: 100%;
-    height: 555px;
-    background-color: #888;
-    z-index: 10;
+    background-color: var(--top-bottom-color);
+    color: var(--top-bottom-text-color);
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
+footer hr {
+    transform: translate(90deg);
+    width: 1px;
+    height: inherit;
+    background-color: #333;
+}
+footer .socials {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 75px;
+}
+footer .socials img {
+    width: 30px;
+    height: 30px;
+}
+footer .socials img:hover {
+    opacity: 0.8;
+}
+footer .socials .avito {
+    width: 75px;
+    height: 19.15px;
+}
+footer .socials .tiktok {
+    width: 45px;
+    height: 45px;
+    margin-left: -4px;
+    margin-top: 6px;
+}
+footer .socials a + a {
+    margin-top: 14px;
+}
+footer .logo {
+    padding: 5px 51px;
+}
+footer .navigation {
+    padding-left: 80px;
+    padding-top: 44px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+}
+footer .navigation a {
+    color: var(--top-bottom-text-color);
+    text-decoration: none;
+    font-family: var(--primary-font-family);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0px;
+}
+footer .navigation a:hover {
+    border-bottom: 1px solid var(--top-bottom-text-color);
+}
+footer .navigation .main + .catalogue {
+    margin-left: 54px;
+}
+footer .navigation .catalogue .main-a + ul {
+    margin-top: 8px;
+}
+footer .navigation .catalogue ul li + li {
+    margin-top: 6px;
+}
+footer .search {
+    padding-top: 23px;
+    padding-left: 55px;
+}
+footer .search .header__search-icon_footer {
+    position: relative;
+    right: 65px;
+    top: 10px;
 }
 @media screen and (max-width: 1616px) {
     .cards {
