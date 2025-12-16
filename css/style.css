@@ -575,6 +575,15 @@ footer .search .header__search-icon_footer {
     .header__search {
         margin-left: 80px;
     }
+    .popular-goods_small__main-heading, .popular-goods_small__main-heading--sub {
+        font-size: 28px;
+    }
+    .popular-accordion h2 {
+        font-size: 20px;
+    }
+    .whole-catalogue a h2 {
+        font-size: 20px;
+    }
 }
 @media screen and (max-width: 1415px) {
     .popular-accordion {
@@ -623,15 +632,6 @@ footer .search .header__search-icon_footer {
     .whole-catalogue {
         margin-top: -115px;
         margin-left: 23vw;
-    }
-    .popular-goods_small__main-heading, .popular-goods_small__main-heading--sub {
-        font-size: 28px;
-    }
-    .popular-accordion h2 {
-        font-size: 20px;
-    }
-    .whole-catalogue a h2 {
-        font-size: 20px;
     }
 }
 @media screen and (max-width: 950px) {
