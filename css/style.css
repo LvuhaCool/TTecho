@@ -556,11 +556,17 @@ footer .navigation .catalogue ul li + li {
 footer .search {
     padding-top: 23px;
     padding-left: 55px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
 }
 footer .search .header__search-icon_footer {
-    position: relative;
-    right: 65px;
-    top: 10px;
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%); 
+    cursor: pointer;
 }
 @media screen and (max-width: 1616px) {
     .cards {
