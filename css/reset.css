@@ -7,8 +7,21 @@
 	border: none;
 }
 
-body {
-	overflow-x: hidden;
+html, body {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+header, main, footer {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
 }
 
 *,
