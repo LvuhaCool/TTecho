@@ -62,7 +62,7 @@ img {
 img, svg {
 	max-width: 100%;
 	height: auto;
-	pointer-events: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 address {
