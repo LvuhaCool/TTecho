@@ -850,7 +850,7 @@ footer .search .header__search-icon_footer {
 }
 @media screen and (max-width: 545px) {
     footer .search .header__input {
-        margin-left: -55px;
+        margin-left: -40px;
     }
 }
 @media screen and (max-width: 520px) {
