@@ -91,6 +91,9 @@ header {
     margin-top: -40px;
     transform: translateX(0);
 }
+.slider.none, .slider-mobile, .slider-dots.none {
+    display: none;
+}
 .slider__current-img {
     min-width: 100%;
     width: 100%;

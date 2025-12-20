@@ -26,6 +26,7 @@ const cardsContainer = document.querySelector(".cards");
 window.onload = () => {
     if (isMobile) {
         sliderContainer.classList.add("none");
+        sliderDotContainer.classList.add("none");
     }
     else {
         sliderBack.addEventListener("click", sliderEventHandlerBack);
