@@ -1,4 +1,6 @@
 // Переменные
+// Определение мобильного устройтсва
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 // Для слайдера
 const currentImg = document.querySelector(".slider__current-img");
 const sliderBack = document.querySelector(".slider__back-btn");
@@ -42,13 +44,15 @@ function resetSliderTimer () {
         resetSliderTimer();
     }, 5000)
 }
-sliderBack.addEventListener("click", sliderEventHandlerBack);
+if (isMobile === false) {
+    sliderBack.addEventListener("click", sliderEventHandlerBack);
+    sliderForward.addEventListener("click", sliderEventHandlerForward);
+}
 function sliderEventHandlerBack() {
     sliderBackFun();
     dotChanging();
     resetSliderTimer();
 }
-sliderForward.addEventListener("click", sliderEventHandlerForward);
 function sliderEventHandlerForward() {
     sliderForwardFun();
     dotChanging();
