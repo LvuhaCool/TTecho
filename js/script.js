@@ -6,6 +6,7 @@ const sliderContainer = document.querySelector(".slider");
 const currentImg = document.querySelector(".slider__current-img");
 const sliderBack = document.querySelector(".slider__back-btn");
 const sliderForward = document.querySelector(".slider__forward-btn");
+const sliderMobile = document.querySelector(".slider-mobile");
 const sliderDotContainer = document.querySelector(".slider-dots");
 // Для меню
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
@@ -26,7 +27,7 @@ const cardsContainer = document.querySelector(".cards");
 window.onload = () => {
     if (isMobile) {
         sliderContainer.classList.add("none");
-        sliderDotContainer.classList.add("none");
+        sliderMobile.classList.add("is-mobile");        
     }
     else {
         sliderBack.addEventListener("click", sliderEventHandlerBack);
