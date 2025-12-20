@@ -596,6 +596,9 @@ footer .search .header__search-icon_footer {
     .whole-catalogue a h2 {
         font-size: 20px;
     }
+    .popular-accordion__show-hide {
+        left: -9.2px;
+    }
 }
 @media screen and (max-width: 1415px) {
     .popular-accordion {
