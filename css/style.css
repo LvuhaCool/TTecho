@@ -139,6 +139,9 @@ header {
     aspect-ratio: 16 / 9;
     height: calc(width / 16 * 9);
 }
+.slider-mobile__slide img {
+    transition: transform 0.3s ease-out;
+}
 .slider-dots {
     margin-top: 10px;
     display: flex;

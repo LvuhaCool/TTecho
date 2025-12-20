@@ -8,6 +8,9 @@ const sliderBack = document.querySelector(".slider__back-btn");
 const sliderForward = document.querySelector(".slider__forward-btn");
 const sliderMobile = document.querySelector(".slider-mobile");
 const sliderDotContainer = document.querySelector(".slider-dots");
+// Для слайдера на мобильных устройствах
+const sliderContainerMobile = document.querySelector(".slider-mobile__container");
+const sliderSlideMobile = Array.from(document.querySelectorAll(".slider-mobile__slide"));
 // Для меню
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
@@ -170,26 +173,62 @@ function showMoreCardsFun() {
         cardsContainer.insertAdjacentHTML("beforeend", cardsSnippet);
     }
 }
-
+// Слайдера для мобильных устройств (по свайпу)
 let isDragging = false;
 let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let animationID = 0;
 let currentMobileIndex = 0;
-sliderImages.forEach((slide, index) => {
+sliderSlideMobile.forEach((slide, index) => {
+    slide.addEventListener("dragstart", (e) => e.preventDefault())
     slide.addEventListener("touchstart", touchStart(index));
     slide.addEventListener("touchend", touchEnd);
     slide.addEventListener("touchmove", touchMove);
 })
+window.oncontextmenu = function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+}
 function touchStart(index) {
     return function (event) {
-        console.log("start");
+        currentSliderIndex = index;
+        startPos = getPositionX(event);
+        isDragging = true;
+        animationID = requestAnimationFrame(animation);
+        sliderContainerMobile.classList.add("grabbing");
     }
 }
 function touchEnd() {
-    console.log("end");
+    isDragging = false;
+    cancelAnimationFrame(animationID);
+    const movedBy = currentTranslate - prevTranslate;
+    if(movedBy <= -100 && currentMobileIndex < sliderSlideMobile.length - 1) {
+        currentMobileIndex += 1;
+    }
+    if(movedBy >= 100 && currentMobileIndex >  0) {
+        currentMobileIndex -= 1;
+    }
+    sliderContainerMobile.classList.remove("grabbing");
 }
-function touchMove() {
-    console.log("move");
+function touchMove(event) {
+    if (isDragging) {
+        const currentPosition = getPositionX(event);
+        currentTranslate = prevTranslate + currentPosition - startPos;
+    }
+}
+function getPositionX(event) {
+    return event.touches[0].clientX;
+}
+function animation() {
+    setSliderPosition();
+    if (isDragging) requestAnimationFrame(animation);
+}
+function setSliderPosition() {
+    sliderContainerMobile.style.transform = `translateX(${currentTranslate}px)`
+}
+function setPositionByIndex() {
+    currentTranslate = currentMobileIndex * -window.innerWidth;
+    prevTranslate = currentTranslate;
 }
