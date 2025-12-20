@@ -89,6 +89,7 @@ header {
     position: relative;
     z-index: 1;
     margin-top: -40px;
+    transform: translateX(0);
 }
 .slider__current-img {
     min-width: 100%;

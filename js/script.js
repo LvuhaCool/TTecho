@@ -2,6 +2,7 @@
 // Определение мобильного устройтсва
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 // Для слайдера
+const sliderContainer = document.querySelector(".slider");
 const currentImg = document.querySelector(".slider__current-img");
 const sliderBack = document.querySelector(".slider__back-btn");
 const sliderForward = document.querySelector(".slider__forward-btn");
@@ -22,15 +23,13 @@ const accordionOptions = document.querySelectorAll(".popular-accordion__option")
 const showMoreCardsBtn = document.querySelector(".cards__show-more-btn");
 const cardsContainer = document.querySelector(".cards");
 // Проверка на мобильное устройство или десктоп
-window.onload = mobileCheck(sliderBack, sliderForward);
-function mobileCheck (back, forward) {
+window.onload = () => {
     if (isMobile) {
-        back.classList.add("none");
-        forward.classList.add("none");
+        sliderContainer.classList.add("none");
     }
     else {
-        back.addEventListener("click", sliderEventHandlerBack);
-        forward.addEventListener("click", sliderEventHandlerForward);
+        sliderBack.addEventListener("click", sliderEventHandlerBack);
+        sliderForward.addEventListener("click", sliderEventHandlerForward);
     }
 }
 // Адаптивное меню-гамбургер
@@ -168,4 +167,27 @@ function showMoreCardsFun() {
     for (i = 0; i < 12; i++) {
         cardsContainer.insertAdjacentHTML("beforeend", cardsSnippet);
     }
+}
+
+let isDragging = false;
+let startPos = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID = 0;
+let currentMobileIndex = 0;
+sliderImages.forEach((slide, index) => {
+    slide.addEventListener("touchstart", touchStart(index));
+    slide.addEventListener("touchend", touchEnd);
+    slide.addEventListener("touchmove", touchMove);
+})
+function touchStart(index) {
+    return function (event) {
+        console.log("start");
+    }
+}
+function touchEnd() {
+    console.log("end");
+}
+function touchMove() {
+    console.log("move");
 }
