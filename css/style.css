@@ -102,6 +102,9 @@ header {
     z-index: 10;
     top: 50%;
 }
+.slider__back-btn.none, .slider__forward-btn.none {
+    display: none;
+}
 .slider__back-btn {
     left: 0;
 }

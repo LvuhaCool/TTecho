@@ -21,6 +21,18 @@ const accordionOptions = document.querySelectorAll(".popular-accordion__option")
 // Для кнопки "показать еще" на главной странице
 const showMoreCardsBtn = document.querySelector(".cards__show-more-btn");
 const cardsContainer = document.querySelector(".cards");
+// Проверка на мобильное устройство или десктоп
+window.onload = mobileCheck(sliderBack, sliderForward);
+function mobileCheck (back, forward) {
+    if (isMobile) {
+        back.classList.add("none");
+        forward.classList.add("none");
+    }
+    else {
+        back.addEventListener("click", sliderEventHandlerBack);
+        forward.addEventListener("click", sliderEventHandlerForward);
+    }
+}
 // Адаптивное меню-гамбургер
 let hamburgerFun = () => {
     sliderMargin.classList.toggle("active");
@@ -43,10 +55,6 @@ function resetSliderTimer () {
         dotChanging()
         resetSliderTimer();
     }, 5000)
-}
-if (isMobile === false) {
-    sliderBack.addEventListener("click", sliderEventHandlerBack);
-    sliderForward.addEventListener("click", sliderEventHandlerForward);
 }
 function sliderEventHandlerBack() {
     sliderBackFun();
