@@ -231,4 +231,5 @@ function setSliderPosition() {
 function setPositionByIndex() {
     currentTranslate = currentMobileIndex * -window.innerWidth;
     prevTranslate = currentTranslate;
+    setSliderPosition()
 }
