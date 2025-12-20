@@ -236,6 +236,9 @@ header {
 }
 .popular-goods_small__main-heading--sub {
     display: none;
+    height: fit-content;
+}
+.popular-goods_small__main-heading--sub:hover {
     border-bottom: 1px solid var(--primary-text-color);
 }
 .popular-accordion {
