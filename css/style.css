@@ -132,6 +132,9 @@ header {
     align-items: center;
     z-index: 10000;
 }
+.slider-mobile__container.grabbing {
+    cursor: grabbing;
+}
 .slider-mobile__slide {
     min-width: 100vw;
     width: 100vw;
