@@ -29,13 +29,22 @@ const cardsContainer = document.querySelector(".cards");
 // Проверка на мобильное устройство или десктоп
 window.onload = () => {
     if (isMobile) {
-        sliderContainer.classList.add("none");
-        sliderMobile.classList.add("is-mobile");        
+        sliderBack.classList.add("none");
+        sliderForward.classList.add("none");
+        resetSliderTimerMobile()
     }
     else {
         sliderBack.addEventListener("click", sliderEventHandlerBack);
         sliderForward.addEventListener("click", sliderEventHandlerForward);
     }
+}
+function resetSliderTimerMobile() {
+    clearTimeout(sliderTimer);
+    sliderTimer = setTimeout(() => {
+        sliderForwardFun()
+        dotChanging()
+        resetSliderTimer();
+    }, 3000)
 }
 // Адаптивное меню-гамбургер
 let hamburgerFun = () => {
