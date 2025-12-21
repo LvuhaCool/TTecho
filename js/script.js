@@ -6,11 +6,10 @@ const sliderContainer = document.querySelector(".slider");
 const currentImg = document.querySelector(".slider__current-img");
 const sliderBack = document.querySelector(".slider__back-btn");
 const sliderForward = document.querySelector(".slider__forward-btn");
-const sliderMobile = document.querySelector(".slider-mobile");
 const sliderDotContainer = document.querySelector(".slider-dots");
 // Для слайдера на мобильных устройствах
-const sliderContainerMobile = document.querySelector(".slider-mobile__container");
-const sliderSlideMobile = Array.from(document.querySelectorAll(".slider-mobile__slide"));
+const sliderBackMobile = document.querySelector(".slider__back-btn.none");
+const sliderForwardMobile = document.querySelector(".slider__forward-btn.none");
 // Для меню
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
@@ -33,11 +32,9 @@ window.onload = () => {
         sliderForward.classList.add("none");
         resetSliderTimerMobile()
     }
-    else {
-        sliderBack.addEventListener("click", sliderEventHandlerBack);
-        sliderForward.addEventListener("click", sliderEventHandlerForward);
-    }
 }
+sliderBack.addEventListener("click", sliderEventHandlerBack);
+sliderForward.addEventListener("click", sliderEventHandlerForward);
 function resetSliderTimerMobile() {
     clearTimeout(sliderTimer);
     sliderTimer = setTimeout(() => {
@@ -182,4 +179,3 @@ function showMoreCardsFun() {
         cardsContainer.insertAdjacentHTML("beforeend", cardsSnippet);
     }
 }
-// Слайдера для мобильных устройств (по свайпу)
