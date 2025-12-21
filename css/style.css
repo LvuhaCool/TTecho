@@ -20,7 +20,7 @@ header {
     margin-left: 5px;
     margin-top: -17px;
 }
-.header__logo {
+.header__logo img {
     width: 316px;
     height: 222px;
 }
@@ -102,6 +102,8 @@ header {
     position: absolute;
     z-index: 10;
     top: 50%;
+    width: 105px;
+    height: 104.13px;
 }
 .slider__back-btn.none, .slider__forward-btn.none {
     opacity: 0;
@@ -411,7 +413,7 @@ header {
     line-height: 16px;
 }
 .card__price.inactive {
-    color: rgb(192, 192, 192);
+    color: rgb(173, 173, 173);
     text-decoration: line-through;
     font-size: 11.25px;
     font-weight: 500;

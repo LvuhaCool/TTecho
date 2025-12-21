@@ -30,19 +30,18 @@ window.onload = () => {
     if (isMobile) {
         sliderBack.classList.add("none");
         sliderForward.classList.add("none");
-        resetSliderTimerMobile()
     }
+    preloadImages(sliderImages);
+}
+// Предварительная загрузка картинок
+function preloadImages(urls) {
+  urls.forEach(url => {
+    const img = new Image();
+    img.src = url;
+  });
 }
 sliderBack.addEventListener("click", sliderEventHandlerBack);
 sliderForward.addEventListener("click", sliderEventHandlerForward);
-function resetSliderTimerMobile() {
-    clearTimeout(sliderTimer);
-    sliderTimer = setTimeout(() => {
-        sliderForwardFun()
-        dotChanging()
-        resetSliderTimer();
-    }, 3000)
-}
 // Адаптивное меню-гамбургер
 let hamburgerFun = () => {
     sliderMargin.classList.toggle("active");
