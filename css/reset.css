@@ -18,6 +18,15 @@ html, body {
     -moz-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
+/* Removes the blue outline when clicking or focusing */
+button:focus, a:focus, input:focus {
+    outline: none !important;
+}
+
+/* For modern browsers, targeting only keyboard users while hiding for mouse/touch */
+:focus:not(:focus-visible) {
+    outline: none;
+}
 header, main, footer {
     width: 100%;
     min-width: 100%;
