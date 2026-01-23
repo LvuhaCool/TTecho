@@ -115,11 +115,11 @@ header {
     margin-top: -20%;
 }
 .slider__back-btn {
-    left: 0;
+    left: 15px;
+    transform: rotate(180deg);
 }
 .slider__forward-btn {
-    right: 0;
-    transform: rotate(180deg);
+    right: 30px;
 }
 .slider-dots {
     margin-top: 10px;
@@ -698,6 +698,12 @@ footer .search .header__search-icon_footer {
     }
 }
 @media screen and (max-width: 905px) {
+    .slider__back-btn, .slider__forward-btn {
+        cursor: default;
+        width: 155px;
+        height: 100%;
+        opacity: 0;
+    }
     footer {
         padding: 0;
         flex-direction: column;
@@ -822,12 +828,6 @@ footer .search .header__search-icon_footer {
     .slider.active {
         margin-top: 0;
     }
-    .slider__back-btn, .slider__forward-btn {
-        cursor: default;
-        width: 155px;
-        height: 100%;
-        opacity: 0;
-    }
     .about__text p {
         font-size: 16px;
     }
@@ -849,8 +849,13 @@ footer .search .header__search-icon_footer {
     .hamburger-menu__search-icon {
         right: 15%;
     }
+}
+@media screen and (max-width: 400px) {
     #accordionHeading + .popular-goods_small__main-heading--sub {
-        margin-left: 6000px;
+        margin-left: 5px;
+    }
+    .cards {
+        column-gap: 8px;
     }
 }
 @media screen and (min-width: 769px) {
