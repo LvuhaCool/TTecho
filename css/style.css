@@ -1,5 +1,6 @@
 @import url("reset.css");
 @import url("./header.css");
+@import url("./footer.css");
 :root {
     --primary-color: #fff;
     --top-bottom-color: #1D2641;
@@ -332,100 +333,6 @@
     background-color: var(--top-bottom-color);
     color: var(--top-bottom-text-color);
 }
-footer {
-    padding-left: 55px;
-    padding-bottom: 15px;
-    width: 100%;
-    background-color: var(--top-bottom-color);
-    color: var(--top-bottom-text-color);
-    display: flex;
-    flex-direction: row;
-    margin-top: 25px;
-}
-footer hr {
-    transform: translate(90deg);
-    width: 1px;
-    height: inherit;
-    background-color: #333;
-}
-footer .logo {
-    padding-right: 25px;
-}
-footer .navigation {
-    padding-left: 80px;
-    padding-top: 44px;
-    padding-right: 100px;
-    display: flex;
-    flex-direction: column;
-}
-footer .navigation .links + .socials {
-    margin-top: 15px;
-}
-footer .navigation .links a {
-    color: var(--top-bottom-text-color);
-    text-decoration: none;
-    font-family: var(--primary-font-family);
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 18px;
-    letter-spacing: 0px;
-}
-footer .navigation .links a:hover {
-    border-bottom: 1px solid var(--top-bottom-text-color);
-}
-footer .navigation .links .main + .catalogue {
-    margin-left: 100px;
-    margin-top: -17px;
-}
-footer .navigation .links .catalogue .main-a + ul {
-    margin-top: 8px;
-}
-footer .navigation .links .catalogue ul li + li {
-    margin-top: 6px;
-}
-footer .navigation .socials {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: row;
-    padding-right: 75px;
-}
-footer .navigation .socials img {
-    width: 30px;
-    height: 30px;
-}
-footer .navigation .socials img:hover {
-    opacity: 0.8;
-}
-footer .navigation .socials .avito {
-    width: 75px;
-    height: 19.15px;
-    margin-top: 2px;
-}
-footer .navigation .socials .tiktok {
-    width: 45px;
-    height: 45px;
-    margin-top: -3px;
-    margin-left: 3px;
-}
-footer .navigation .socials a + a {
-    margin-left: 14px;
-}
-footer .search {
-    padding-top: 46px;
-    padding-left: 110px;
-    position: relative;
-    height: 100%;
-}
-footer .search .header__input {
-    box-sizing: border-box;
-}
-footer .search .header__search-icon_footer {
-    position: absolute;
-    right: 10px;
-    top: calc(50% + 22.5px);
-    transform: translateY(-50%); 
-    cursor: pointer;
-}
 @media screen and (max-width: 1616px) {
     .cards {
         grid-template-columns: repeat(3, 206.25px);
@@ -449,31 +356,6 @@ footer .search .header__search-icon_footer {
 @media screen and (max-width: 1415px) {
     .popular-accordion {
         margin-left: 15vw;
-    }
-    footer .search {
-        padding-top: 23px;
-        padding-left: 55px;
-    }
-    footer .search .header__search-icon_footer {
-        right: 10px;
-        top: calc(50% + 10px);
-    }
-    footer hr {
-        display: none;
-    }
-}
-@media screen and (max-width: 1360px) {
-    footer {
-        flex-wrap: wrap;
-    }
-}
-@media screen and (max-width: 1337px) {
-    footer .search .header__input {
-        margin-left: calc(50vw - 375px);
-        margin-top: 25px;
-    }
-    footer .search .header__search-icon_footer {
-        top: calc(50% + 24px);
     }
 }
 @media screen and (max-width: 1234px) {
@@ -508,29 +390,6 @@ footer .search .header__search-icon_footer {
         width: 155px;
         height: 100%;
         opacity: 0;
-    }
-    footer {
-        padding: 0;
-        flex-direction: column;
-        padding-left: 25vw;
-    }
-    footer .logo {
-        padding-right: 0;
-    }
-    footer .navigation {
-        padding: 0;
-    }
-    footer .search {
-        padding-left: 0;
-    }
-    footer .search .header__input {
-        margin-left: 0;
-        margin-top: 0;
-        margin-bottom: 25px;
-    }
-    footer .search .header__search-icon_footer {
-        right: calc(40vw - 46px);
-        top: 50%;
     }
 }
 @media screen and (max-width: 900px) {
@@ -573,11 +432,6 @@ footer .search .header__search-icon_footer {
         gap: 24.5px;
     }
 }
-@media screen and (max-width: 875px) {
-    footer .search .header__search-icon_footer {
-        right: 33vw;
-    }
-}
 @media screen and (max-width: 829px) {
     .popular-goods_small__heading {
         justify-content: space-between;
@@ -602,35 +456,6 @@ footer .search .header__search-icon_footer {
     }
     .whole-catalogue {
         display: none;
-    }
-    footer .search .header__search-icon_footer {
-        right: 31vw;
-    }
-}
-@media screen and (max-width: 768px) {
-    header {
-        height: 176px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .hamburger-menu {
-        display: block;
-    }
-    .header__logo-container {
-        display: none;
-    }
-    .header__main {
-        display: none;
-    }
-    .header__search {
-        display: none;
-    }
-}
-@media screen and (max-width: 520px) {
-    footer {
-        padding-left: 10vw;
-        justify-content: flex-start;
     }
 }
 @media screen and (max-width: 400px) {

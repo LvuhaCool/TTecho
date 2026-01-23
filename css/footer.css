@@ -1,0 +1,10 @@
+footer {
+    padding-left: 55px;
+    padding-bottom: 15px;
+    width: 100%;
+    background-color: var(--top-bottom-color);
+    color: var(--top-bottom-text-color);
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+}
