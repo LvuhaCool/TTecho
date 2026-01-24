@@ -22,6 +22,26 @@ const accordionOptions = document.querySelectorAll(".popular-accordion__option")
 // Для кнопки "показать еще" на главной странице
 const showMoreCardsBtn = document.querySelector(".cards__show-more-btn");
 const cardsContainer = document.querySelector(".cards");
+// Для футера
+const footer = document.querySelector("footer");
+const ball = document.querySelector(".footer-ball");
+let targetX = 0;
+let targetY = 0;
+let xPos = 0;
+let yPos = 0;
+footer.addEventListener("mousemove", ballFun);
+function ballFun(e) {
+    const rect = footer.getBoundingClientRect();
+    targetX = e.clientX - rect.left;
+    targetY = e.clientY - rect.top;
+}
+function animate() {
+    xPos += (targetX - xPos) * 0.1;
+    yPos += (targetY - yPos) * 0.1;
+    ball.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+    requestAnimationFrame(animate);
+}
+animate();
 // Проверка на мобильное устройство или десктоп
 window.onload = () => {
     if (isMobile) {
@@ -33,6 +53,7 @@ window.onload = () => {
     });
     changeSlide();
 };
+// Движение мячика в футере
 
 sliderBack.addEventListener("click", sliderEventHandlerBack);
 sliderForward.addEventListener("click", sliderEventHandlerForward);
