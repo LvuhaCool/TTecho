@@ -1,4 +1,103 @@
 // Переменные
+// Массив карточек
+const data = [
+    {
+        id: 0,
+        img: "./img/card-images/dignics-05.jpg",
+        alt: "Dignics 05",
+        name: "Butterfly Dignics 05",
+        price: "8000",
+        inactivePrice: "10000"
+    },
+    {
+        id: 1,
+        img: "./img/card-images/dignics-09c.webp",
+        alt: "Dignics 09c",
+        name: "Butterfly Dignics 09c",
+        price: "9000",
+        inactivePrice: "11000"
+    },
+    {
+        id: 2,
+        img: "./img/card-images/tenergy-05.png",
+        alt: "Tenergy 05",
+        name: "Butterfly Tenergy 05",
+        price: "7000",
+        inactivePrice: ""
+    },
+    {
+        id: 3,
+        img: "./img/card-images/tenergy-19.jfif",
+        alt: "Tenergy 19",
+        name: "Buttefly Tenergy 19",
+        price: "9000",
+        inactivePrice: "10000"
+    },
+    {
+        id: 4,
+        img: "./img/card-images/viscaria.jpg",
+        alt: "Viscaria",
+        name: "Butterfly Viscaria",
+        price: "15000",
+        inactivePrice: ""
+    },
+    {
+        id: 5,
+        img: "./img/card-images/tb-alc.jpg",
+        alt: "Timo Boll ALC",
+        name: "Butterfly Timo Boll ALC",
+        price: "20000",
+        inactivePrice: "21000"
+    },
+    {
+        id: 6,
+        img: "./img/card-images/tb-zlc.webp",
+        alt: "Timo Boll ZLC",
+        name: "Butterfly Timo Boll ZLC",
+        price: "21500",
+        inactivePrice: ""
+    },
+    {
+        id: 7,
+        img: "./img/card-images/feint-long-3.jpg",
+        alt: "Feint Long III",
+        name: "Butterfly Feint Long III",
+        price: "9000",
+        inactivePrice: ""
+    },
+    {
+        id: 8,
+        img: "./img/card-images/feint-long-2.jfif",
+        alt: "Feint Long II",
+        name: "Butterfly Feint Long II",
+        price: "8000",
+        inactivePrice: "8500"
+    },
+    {
+        id: 9,
+        img: "./img/card-images/mizuno-wave-drive-9-white.jfif",
+        alt: "Mizuno wave drive 9",
+        name: "Mizuno wave drive 9",
+        price: "12000",
+        inactivePrice: ""
+    },
+    {
+        id: 10,
+        img: "./img/card-images/mizuno-wave-drive-neo-3-black.jfif",
+        alt: "Mizuno wave drive neo 3",
+        name: "Mizuno wave drive neo 3",
+        price: "13000",
+        inactivePrice: "15000"
+    },
+    {
+        id: 11,
+        img: "./img/card-images/zyre-03.jpg",
+        alt: "Zyre 03",
+        name: "Butterfly Zyre 03",
+        price: "15000",
+        inactivePrice: ""
+    },
+];
 // Определение мобильного устройтсва
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 // Для слайдера
@@ -57,6 +156,26 @@ window.onload = () => {
     });
     changeSlide();
 };
+// Render
+document.addEventListener("DOMContentLoaded", render);
+function render() {
+    data.forEach((element) => {
+        cardsContainer.insertAdjacentHTML("beforeend",
+            `<div class="card">
+                    <div class="card__picture-wrapper">
+                        <img src="${element.img}" alt="${element.alt}" class="card__picture">
+                    </div>
+                    <div class="card__content">
+                        <span class="card__name">${element.name}</span>
+                        <div class="card__prices">
+                            <div class="card__price active">${element.price}₽</div>
+                            <div class="card__price inactive">${element.inactivePrice}₽</div>
+                        </div>
+                    </div>
+                </div>`
+        );
+    })
+}
 // Движение мячика в футере
 
 sliderBack.addEventListener("click", sliderEventHandlerBack);
