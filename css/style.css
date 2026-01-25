@@ -312,13 +312,13 @@
     line-height: 30px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s linear, visibility 0.3s linear, padding-bottom 0.3s linear;
-    padding-bottom: 0;
+    transition: opacity 0.3s linear, visibility 0.3s linear, margin-bottom 0.3s linear;
+    margin-bottom: -60px;
 }
 .about__text_more.expanded {
     opacity: 1;
     visibility: visible;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
 }
 .cards__show-more-btn-container {
     text-align: center;
@@ -465,12 +465,25 @@
         display: none;
     }
 }
+@media screen and (max-width: 768px) {
+    .about__text_more {
+        margin-bottom: -105px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .about__text_more {
+        margin-bottom: -150px;
+    }
+}
 @media screen and (max-width: 400px) {
     #accordionHeading + .popular-goods_small__main-heading--sub {
         margin-left: 5px;
     }
     .cards {
         column-gap: 8px;
+    }
+    .about__text_more {
+        margin-bottom: -200px;
     }
 }
 @media screen and (min-width: 769px) {
