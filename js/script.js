@@ -41,6 +41,10 @@ function animate() {
     ball.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
     requestAnimationFrame(animate);
 }
+if (isMobile) {
+    footer.removeEventListener("mousemove", ballFun);
+    ball.classList.add("mobile-hidden");
+}
 animate();
 // Проверка на мобильное устройство или десктоп
 window.onload = () => {

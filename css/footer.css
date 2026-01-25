@@ -19,6 +19,9 @@ footer {
     z-index: 10;
     transition: transform 0.3s linear;
 }
+.footer-ball.mobile-hidden {
+    display: none;
+}
 .footer-ball__butterfly {
     width: 26px;
     height: 26px;
