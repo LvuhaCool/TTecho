@@ -281,6 +281,8 @@
     margin-top: 15px;
     width: 80%;
     margin-left: 10%;
+    padding-bottom: 0;
+    transition: padding-bottom 0.3s linear;
 }
 .about__text_less {
     color: var(--primary-text-color);
@@ -294,9 +296,12 @@
 }
 .about__unfold {
     top: 4px;
+    transition: width 0.3s linear, height 0.3s linear;
 }
 .about__unfold.invisible {
     visibility: hidden;
+    width: 0;
+    height: 0;
 }
 .about__text_more {
     color: var(--primary-text-color);
@@ -306,13 +311,13 @@
     line-height: 30px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s linear, visibility 0.3s linear, margin-bottom 0.3s linear;
-    margin-bottom: -50px;
+    transition: opacity 0.3s linear, visibility 0.3s linear, padding-bottom 0.3s linear;
+    padding-bottom: 0;
 }
 .about__text_more.expanded {
     opacity: 1;
     visibility: visible;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
 }
 .cards__show-more-btn-container {
     text-align: center;

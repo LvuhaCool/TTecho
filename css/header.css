@@ -45,14 +45,19 @@ header {
 .header__nav a:hover {
     border-bottom: 0.5px solid var(--top-bottom-text-color);
 }
-.header__search {
-    margin-left: 150px;
+.header__search, .footer-search {
     display: flex;
     align-items: center;
     position: relative;
-    height: 100%;
 }
-.header__input {
+.header__search {
+    width: 375px;
+    margin-left: 150px;
+}
+.footer-search {
+    margin-left: 0;
+}
+.header__input, .footer__input {
     width: 375px;
     height: 63.75px;
     border: none;
@@ -65,9 +70,12 @@ header {
     font-weight: 700;
     line-height: 26px;
     padding-left: 22px;
-    flex-grow: 1;
 }
-.header__search-icon {
+.footer__input {
+    width: 375px;
+    height: 63.75px;
+}
+.header__search-icon, .footer__search-icon {
     position: absolute;
     right: 10px;
     top: 50%;
