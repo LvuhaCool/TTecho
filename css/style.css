@@ -478,6 +478,12 @@
     .about__text_less {
         font-size: 14px;
     }
+    .popular-goods_small__main-heading--sub {
+        font-size: 16px;
+    }
+    .whole-catalogue {
+        font-size: 15px;
+    }
 }
 @media screen and (max-width: 400px) {
     #accordionHeading + .popular-goods_small__main-heading--sub {
