@@ -473,6 +473,10 @@
 @media screen and (max-width: 600px) {
     .about__text_more {
         margin-bottom: -150px;
+        font-size: 14px;
+    }
+    .about__text_less {
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 400px) {
