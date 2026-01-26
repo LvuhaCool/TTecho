@@ -1,107 +1,11 @@
 // Переменные
 // Массив карточек
-const data = [
-    {
-        id: 0,
-        img: "./img/card-images/dignics-05.jpg",
-        alt: "Dignics 05",
-        name: "Butterfly Dignics 05",
-        price: "8000",
-        inactivePrice: "10000"
-    },
-    {
-        id: 1,
-        img: "./img/card-images/dignics-09c.webp",
-        alt: "Dignics 09c",
-        name: "Butterfly Dignics 09c",
-        price: "9000",
-        inactivePrice: "11000"
-    },
-    {
-        id: 2,
-        img: "./img/card-images/tenergy-05.png",
-        alt: "Tenergy 05",
-        name: "Butterfly Tenergy 05",
-        price: "7000",
-        inactivePrice: ""
-    },
-    {
-        id: 3,
-        img: "./img/card-images/tenergy-19.jfif",
-        alt: "Tenergy 19",
-        name: "Buttefly Tenergy 19",
-        price: "9000",
-        inactivePrice: "10000"
-    },
-    {
-        id: 4,
-        img: "./img/card-images/viscaria.jpg",
-        alt: "Viscaria",
-        name: "Butterfly Viscaria",
-        price: "15000",
-        inactivePrice: ""
-    },
-    {
-        id: 5,
-        img: "./img/card-images/tb-alc.jpg",
-        alt: "Timo Boll ALC",
-        name: "Butterfly Timo Boll ALC",
-        price: "20000",
-        inactivePrice: "21000"
-    },
-    {
-        id: 6,
-        img: "./img/card-images/tb-zlc.webp",
-        alt: "Timo Boll ZLC",
-        name: "Butterfly Timo Boll ZLC",
-        price: "21500",
-        inactivePrice: ""
-    },
-    {
-        id: 7,
-        img: "./img/card-images/feint-long-3.jpg",
-        alt: "Feint Long III",
-        name: "Butterfly Feint Long III",
-        price: "9000",
-        inactivePrice: ""
-    },
-    {
-        id: 8,
-        img: "./img/card-images/feint-long-2.jfif",
-        alt: "Feint Long II",
-        name: "Butterfly Feint Long II",
-        price: "8000",
-        inactivePrice: "8500"
-    },
-    {
-        id: 9,
-        img: "./img/card-images/mizuno-wave-drive-9-white.jfif",
-        alt: "Mizuno wave drive 9",
-        name: "Mizuno wave drive 9",
-        price: "12000",
-        inactivePrice: ""
-    },
-    {
-        id: 10,
-        img: "./img/card-images/mizuno-wave-drive-neo-3-black.jfif",
-        alt: "Mizuno wave drive neo 3",
-        name: "Mizuno wave drive neo 3",
-        price: "13000",
-        inactivePrice: "15000"
-    },
-    {
-        id: 11,
-        img: "./img/card-images/zyre-03.jpg",
-        alt: "Zyre 03",
-        name: "Butterfly Zyre 03",
-        price: "15000",
-        inactivePrice: ""
-    },
-];
+import { data } from "./data.js";
+let shownCardsCount = 0;
+let showCardsStep = 12;
 // Определение мобильного устройтсва
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 // Для слайдера
-const sliderContainer = document.querySelector(".slider");
 const sliderImg = Array.from(document.querySelectorAll(".slider__img"));
 const sliderBack = document.querySelector(".slider__back-btn");
 const sliderForward = document.querySelector(".slider__forward-btn");
@@ -109,7 +13,6 @@ const sliderDotContainer = document.querySelector(".slider-dots");
 // Для меню
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
-const sliderMargin = document.querySelector(".slider");
 // Для секции "О нас"
 const moreTextParagraph = document.querySelector(".about__text_more");
 const showMore = document.querySelector(".about__unfold");
@@ -158,8 +61,10 @@ window.onload = () => {
 };
 // Render
 document.addEventListener("DOMContentLoaded", render);
+showMoreCardsBtn.addEventListener("click", render);
 function render() {
-    data.forEach((element) => {
+    const currentArray = data.slice(shownCardsCount, shownCardsCount + showCardsStep);
+    currentArray.forEach((element) => {
         cardsContainer.insertAdjacentHTML("beforeend",
             `<div class="card">
                     <div class="card__picture-wrapper">
@@ -169,20 +74,22 @@ function render() {
                         <span class="card__name">${element.name}</span>
                         <div class="card__prices">
                             <div class="card__price active">${element.price}₽</div>
-                            <div class="card__price inactive">${element.inactivePrice}₽</div>
+                            <div class="card__price inactive">${element.inactivePrice}</div>
                         </div>
                     </div>
                 </div>`
         );
     })
-}
+    shownCardsCount += showCardsStep;
+    if (shownCardsCount >= data.length) {
+        showMoreCardsBtn.classList.add("invisible-show-more");
+    };
+};
 // Движение мячика в футере
-
 sliderBack.addEventListener("click", sliderEventHandlerBack);
 sliderForward.addEventListener("click", sliderEventHandlerForward);
 // Адаптивное меню-гамбургер
 let hamburgerFun = () => {
-    sliderMargin.classList.toggle("active");
     adaptiveNav.classList.toggle("visible");
 }
 hamburgerBtn.addEventListener("click", hamburgerFun);
@@ -268,38 +175,17 @@ function foldFunction() {
     showMore.classList.remove("invisible");
 }
 // Аккордеон для популярных категорий товаров
-const accordionFirstFun = () => {
-    accordionContainer.classList.toggle("visible");
-    accordionOptions.forEach(element => {
-        element.classList.toggle("visible");
-    });
+function openAccordion() {
+    accordionContainer.classList.add("visible");
+    accordionOptions.forEach(el => el.classList.add("visible"));
 }
-const accordionSecondFun = () => {
-    accordionContainer.classList.toggle("visible");
-    accordionOptions.forEach(element => {
-        element.classList.toggle("visible");
-    });
+
+function closeAccordion() {
+    accordionContainer.classList.remove("visible");
+    accordionOptions.forEach(el => el.classList.remove("visible"));
 }
-accordionTriggerText.addEventListener("mouseenter", accordionFirstFun);
-accordionTriggerText.addEventListener("mouseleave", accordionFirstFun);
-accordionContainer.addEventListener("mouseenter", accordionFirstFun);
-accordionContainer.addEventListener("mouseleave", accordionFirstFun);
-// Функция кнопки "еще" на главной
-showMoreCardsBtn.addEventListener("click", showMoreCardsFun);
-function showMoreCardsFun() {
-    const cardsSnippet = `<div class="card">
-                    <div class="card__picture-wrapper">
-                        <img src="./img/tenergy-test-good.png" alt="Tenergy 05" class="card__picture">
-                    </div>
-                    <div class="card__content">
-                        <span class="card__name">Butterfly Tenergy 05</span>
-                        <div class="card__prices">
-                            <div class="card__price active">5000₽</div>
-                            <div class="card__price inactive">6000₽</div>
-                        </div>
-                    </div>
-                </div>`;
-    for (i = 0; i < 12; i++) {
-        cardsContainer.insertAdjacentHTML("beforeend", cardsSnippet);
-    }
-}
+accordionTriggerText.addEventListener("mouseenter", openAccordion);
+accordionTriggerText.addEventListener("mouseleave", closeAccordion);
+
+accordionContainer.addEventListener("mouseenter", openAccordion);
+accordionContainer.addEventListener("mouseleave", closeAccordion);
