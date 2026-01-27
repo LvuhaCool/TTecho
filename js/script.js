@@ -214,6 +214,8 @@ const sliderDotContainer = document.querySelector(".slider-dots");
 // Для меню
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
+// Для поиска
+const searchInput = document.querySelector(".header__input");
 // Для секции "О нас"
 const moreTextParagraph = document.querySelector(".about__text_more");
 const showMore = document.querySelector(".about__unfold");
@@ -283,9 +285,53 @@ function render() {
     })
     shownCardsCount += showCardsStep;
     if (shownCardsCount >= data.length) {
-        showMoreCardsBtn.classList.add("invisible-show-more");
-    };
+        hideShowMore();
+    }
+    else {
+        showMoreCardsBtn.classList.remove("invisible-show-more");
+    }
 };
+// Функция поиска
+searchInput.addEventListener("input", searchRender);
+function searchRender() {
+    cardsContainer.innerHTML = "";
+    hideShowMore();
+    data.forEach(element => {
+        if (element.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
+            cardsContainer.insertAdjacentHTML("beforeend",
+            `<div class="card">
+                    <div class="card__picture-wrapper">
+                        <img src="${element.img}" alt="${element.alt}" class="card__picture">
+                    </div>
+                    <div class="card__content">
+                        <span class="card__name">${element.name}</span>
+                        <div class="card__prices">
+                            <div class="card__price active">${element.price}₽</div>
+                            <div class="card__price inactive">${element.inactivePrice}</div>
+                        </div>
+                    </div>
+                </div>`
+            );
+        }
+        else if (searchInput.value == "") {
+            renderHandler();
+            return;
+        }
+        else {
+            return;
+        };
+    });
+    // if (cardsContainer.innerHTML == "") {
+    //     cardsContainer.insertAdjacentHTML("afterbegin", )
+    // }
+}
+function renderHandler() {
+    render();
+}
+// Функция удаления кнопки "Еще"
+function hideShowMore() {
+    showMoreCardsBtn.classList.add("invisible-show-more");
+}
 // Движение мячика в футере
 sliderBack.addEventListener("click", sliderEventHandlerBack);
 sliderForward.addEventListener("click", sliderEventHandlerForward);
