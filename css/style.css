@@ -288,6 +288,31 @@
     background-color: var(--top-bottom-color);
     color: var(--top-bottom-text-color);
 }
+.no-cards__container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.no-cards__container.visible {
+    display: flex;
+}
+.no-cards__heading {
+    color: rgb(33, 33, 33);
+    font-family: var(--primary-font-family);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+.no-cards__follow-up {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+}
 .about {
     margin-left: 17px;
     margin-top: 55px;

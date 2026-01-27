@@ -216,6 +216,8 @@ const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
 // Для поиска
 const searchInput = document.querySelector(".header__input");
+const noCardsBlock = document.querySelector(".no-cards__container");
+let foundCount = 0;
 // Для секции "О нас"
 const moreTextParagraph = document.querySelector(".about__text_more");
 const showMore = document.querySelector(".about__unfold");
@@ -294,12 +296,20 @@ function render() {
 // Функция поиска
 searchInput.addEventListener("input", searchRender);
 function searchRender() {
+    foundCount = 0;
+    noCardsBlock.classList.remove("visible");
     cardsContainer.innerHTML = "";
-    hideShowMore();
-    data.forEach(element => {
+    if (searchInput.value == "") {
+        cardsContainer.innerHTML = "";
+        noCardsBlock.classList.remove("visible");
+        shownCardsCount = 0;
+        render();
+        return;
+    }
+    data.forEach((element) => {
         if (element.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
-            cardsContainer.insertAdjacentHTML("beforeend",
-            `<div class="card">
+            foundCount++;
+            cardsContainer.insertAdjacentHTML("beforeend", `<div class="card">
                     <div class="card__picture-wrapper">
                         <img src="${element.img}" alt="${element.alt}" class="card__picture">
                     </div>
@@ -310,20 +320,15 @@ function searchRender() {
                             <div class="card__price inactive">${element.inactivePrice}</div>
                         </div>
                     </div>
-                </div>`
-            );
+                </div>`);
         }
-        else if (searchInput.value == "") {
-            renderHandler();
-            return;
-        }
-        else {
-            return;
-        };
-    });
-    // if (cardsContainer.innerHTML == "") {
-    //     cardsContainer.insertAdjacentHTML("afterbegin", )
-    // }
+    })
+    if (foundCount == 0) {
+        noCardsBlock.classList.add("visible");
+    }
+    else {
+        noCardsBlock.classList.remove("visible");
+    }
 }
 function renderHandler() {
     render();
