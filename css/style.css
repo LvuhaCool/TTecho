@@ -18,7 +18,6 @@
     max-width: 100vw;
     aspect-ratio: 16 / 9;
     transition: margin-top 0.1s linear;
-    flex-shrink: 0;
     margin-top: 55px;
 }
 .slider__img {
@@ -506,10 +505,5 @@
     }
     .about__text_more {
         margin-bottom: -200px;
-    }
-}
-@media screen and (min-width: 769px) {
-    .slider {
-        margin-top: 0 !important;
     }
 }
