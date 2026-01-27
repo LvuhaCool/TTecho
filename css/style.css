@@ -443,11 +443,13 @@
 }
 @media screen and (max-width: 829px) {
     .popular-goods_small__heading {
-        justify-content: space-between;
+        justify-content: center;
+        gap: 55px;
         align-items: flex-start;
         flex-wrap: nowrap;
         width: 100%;
-        padding: 55px;
+        padding: 0 55px 15px 55px;
+        height: fit-content;
     }
     .popular-goods_small__main-heading {
         display: none;
@@ -462,6 +464,9 @@
     }
     .popular-accordion, #accordionHeading {
         width: fit-content;
+    }
+    #accrodionHeading + .popular-goods_small__main-heading--sub {
+        margin-left: 0;
     }
     .whole-catalogue {
         display: none;
@@ -479,6 +484,10 @@
     }
     .about__text_less {
         font-size: 14px;
+    }
+    .popular-goods_small__heading {
+        padding: -25px 55px 15px 55px;
+        row-gap: 0;
     }
     .popular-goods_small__main-heading--sub {
         font-size: 16px;
