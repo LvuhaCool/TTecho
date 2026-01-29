@@ -218,6 +218,7 @@ const adaptiveNav = document.querySelector(".hamburger-menu__nav");
 const searchInput = document.querySelector(".header__input");
 const hamburgerInput = document.querySelector(".hamburger-menu__input");
 const toggleContainer = document.querySelector(".toggle");
+const header = document.querySelector("header");
 const noCardsBlock = document.querySelector(".no-cards__container");
 let foundCount = 0;
 // Для секции "О нас"
@@ -260,18 +261,22 @@ window.onload = () => {
     if (isMobile) {
         sliderBack.classList.add("none");
         sliderForward.classList.add("none");
-        if (hamburgerInput.value != "") {
-            toggleContainer.classList.add("toggle-invisible");
-        }
-        else {
-            toggleContainer.classList.remove("toggle-invisible");
-        }
     }
     sliderImg.forEach((img, index) => {
         img.style.transform = `translateX(${index * 100}%)`;
     });
     changeSlide();
 };
+// Скрытие .toggle при введение чего-либо в поле на мобиле
+hamburgerInput.addEventListener("input", () => {
+    if (hamburgerInput.value.trim() !== "") {
+        toggleContainer.classList.add("toggle-invisible");
+        header.classList.add("header-toggle");
+    } else {
+        toggleContainer.classList.remove("toggle-invisible");
+        header.classList.remove("header-toggle");
+    }
+});
 // Render
 document.addEventListener("DOMContentLoaded", render);
 showMoreCardsBtn.addEventListener("click", render);

@@ -6,6 +6,9 @@ header {
     display: flex;
     flex-direction: row;
 }
+header.header-toggle {
+    height: 100px;
+}
 .header__logo-container {
     display: block;
     margin-left: 5px;
@@ -95,7 +98,7 @@ header {
     column-gap: 5px;
     margin-bottom: 0;
 }
-.toggle.toggle.invisible {
+.toggle.toggle.toggle-invisible {
     display: none;
 }
 .hamburger-menu__logo {
