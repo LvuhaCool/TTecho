@@ -87,6 +87,13 @@ header {
     text-align: center;
     width: 100%;
 }
+.toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+}
 .hamburger-menu__logo {
     margin-top: -30px;
 }
@@ -94,7 +101,8 @@ header {
     color: var(--primary-color);
     font-size: 45px;
     margin-top: -20px;
-    width: 30%;
+    width: 150%;
+    padding-right: 15%;
 }
 .hamburger-menu__btn:hover {
     color: var(--top-bottom-color);
