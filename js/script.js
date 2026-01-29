@@ -281,7 +281,6 @@ hamburgerInput.addEventListener("input", () => {
 hamburgerInput.addEventListener("keyup", (event) => {
     if (event.key === "Enter" ||event.keyCode === 13) {
         hamburgerInput.blur();
-        header.classList.remove("toggle-invisible");
     }
 })
 // Render
