@@ -93,6 +93,7 @@ header {
     align-items: center;
     justify-content: center;
     column-gap: 5px;
+    margin-bottom: 0;
 }
 .hamburger-menu__logo {
     margin-top: -30px;
@@ -126,6 +127,7 @@ header {
     display: block;
     text-align: center;
     position: relative;
+    margin-top: 0;
 }
 .hamburger-menu__input {
     width: 375px;
@@ -218,10 +220,11 @@ header {
 }
 @media (max-width: 768px) {
     header {
-        height: 215px;
+        height: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: -30px;
     }
     .hamburger-menu {
         display: block;
