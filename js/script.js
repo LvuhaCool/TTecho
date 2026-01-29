@@ -217,6 +217,7 @@ const adaptiveNav = document.querySelector(".hamburger-menu__nav");
 // Для поиска
 const searchInput = document.querySelector(".header__input");
 const hamburgerInput = document.querySelector(".hamburger-menu__input");
+const toggleContainer = document.querySelector(".toggle");
 const noCardsBlock = document.querySelector(".no-cards__container");
 let foundCount = 0;
 // Для секции "О нас"
@@ -259,6 +260,12 @@ window.onload = () => {
     if (isMobile) {
         sliderBack.classList.add("none");
         sliderForward.classList.add("none");
+        if (hamburgerInput.value != "") {
+            toggleContainer.classList.add("toggle-invisible");
+        }
+        else {
+            toggleContainer.classList.remove("toggle-invisible");
+        }
     }
     sliderImg.forEach((img, index) => {
         img.style.transform = `translateX(${index * 100}%)`;
