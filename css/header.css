@@ -105,7 +105,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -113,7 +113,6 @@ header {
 .hamburger-menu__nav.visible {
     opacity: 1;
     max-height: 500px;
-    padding-top: 15px;
 }
 .hamburger-menu__search {
     display: block;
@@ -211,7 +210,7 @@ header {
 }
 @media (max-width: 768px) {
     header {
-        height: 176px;
+        height: 215px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -228,10 +227,38 @@ header {
     .header__search {
         display: none;
     }
+    .hamburger-menu__search {
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width: 690px) {
+    .hamburger-menu__search-icon {
+        right: 24%;
+    }
+}
+@media screen and (max-width: 630px) {
+    .hamburger-menu__search-icon {
+        right: 20.5%;
+    }
+}
+@media screen and (max-width: 565px) {
+    .hamburger-menu__search-icon {
+        right: 18%;
+    }
+}
+@media screen and (max-width: 505px) {
+    .hamburger-menu__search-icon {
+        right: 16%;
+    }
 }
 @media screen and (max-width: 460px) {
     .hamburger-menu__search-icon {
-        right: 15%;
+        right: 13%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .hamburger-menu__search-icon {
+        right: 9%;
     }
 }
 @media screen and (min-width: 769px) {
