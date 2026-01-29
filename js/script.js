@@ -325,13 +325,11 @@ function searchRender() {
     })
     if (foundCount == 0) {
         noCardsBlock.classList.add("visible");
+        hideShowMore();
     }
     else {
         noCardsBlock.classList.remove("visible");
     }
-}
-function renderHandler() {
-    render();
 }
 // Функция удаления кнопки "Еще"
 function hideShowMore() {
