@@ -277,6 +277,12 @@ hamburgerInput.addEventListener("input", () => {
         header.classList.remove("header-toggle");
     }
 });
+// Скрытие мобильной клавы при нажатии Enter
+hamburgerInput.addEventListener("keyup", (event) => {
+    if (event.key === "Enter" ||event.keyCode === 13) {
+        hamburgerInput.blur();
+    }
+})
 // Render
 document.addEventListener("DOMContentLoaded", render);
 showMoreCardsBtn.addEventListener("click", render);
