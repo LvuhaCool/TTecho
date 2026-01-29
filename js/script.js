@@ -216,6 +216,7 @@ const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
 // Для поиска
 const searchInput = document.querySelector(".header__input");
+const hamburgerInput = document.querySelector(".hamburger-menu__input");
 const noCardsBlock = document.querySelector(".no-cards__container");
 let foundCount = 0;
 // Для секции "О нас"
@@ -268,6 +269,11 @@ window.onload = () => {
 document.addEventListener("DOMContentLoaded", render);
 showMoreCardsBtn.addEventListener("click", render);
 function render() {
+     if (searchInput.value != "" && cardsContainer.innerHTML != "" || hamburgerInput.value != "" && cardsContainer.innerHTML != "") {
+        cardsContainer.innerHTML = "";
+        searchInput.value = "";
+        hamburgerInput.value = "";
+    }
     const currentArray = data.slice(shownCardsCount, shownCardsCount + showCardsStep);
     currentArray.forEach((element) => {
         cardsContainer.insertAdjacentHTML("beforeend",
@@ -295,11 +301,17 @@ function render() {
 };
 // Функция поиска
 searchInput.addEventListener("input", searchRender);
+hamburgerInput.addEventListener("input", searchRender);
 function searchRender() {
+     const query =
+        searchInput.value !== ""
+            ? searchInput.value
+            : hamburgerInput.value;
+    showMoreCardsBtn.classList.remove("invisible-show-more");
     foundCount = 0;
     noCardsBlock.classList.remove("visible");
     cardsContainer.innerHTML = "";
-    if (searchInput.value == "") {
+    if (query === "") {
         cardsContainer.innerHTML = "";
         noCardsBlock.classList.remove("visible");
         shownCardsCount = 0;
@@ -307,7 +319,7 @@ function searchRender() {
         return;
     }
     data.forEach((element) => {
-        if (element.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
+        if (element.name.toLowerCase().includes(query.toLowerCase())) {
             foundCount++;
             cardsContainer.insertAdjacentHTML("beforeend", `<div class="card">
                     <div class="card__picture-wrapper">
@@ -329,6 +341,7 @@ function searchRender() {
     }
     else {
         noCardsBlock.classList.remove("visible");
+        shownCardsCount = 0;
     }
 }
 // Функция удаления кнопки "Еще"
