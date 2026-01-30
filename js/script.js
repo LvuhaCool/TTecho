@@ -124,8 +124,8 @@ const data = [
     {
         id: 15,
         img: "./img/card-images/bt-shoe.jfif",
-        alt: "Buttrfly Shoe",
-        name: "Buttrfly Shoe",
+        alt: "Butterfly Shoe",
+        name: "Butterfly Shoe",
         price: "15000",
         inactivePrice: ""
     },
