@@ -4,10 +4,19 @@
 :root {
     --primary-color: #fff;
     --top-bottom-color: #1D2641;
-    --primary-text-color: #000;
+    --primary-text-color: #161616;
     --top-bottom-text-color: #fff;
     --placeholder-text-color: #c0c0c0;
     --primary-font-family: "Montserrat", sans-serif;
+}
+ html.card-none, body.card-none {
+    overflow-y: hidden;
+}
+header.card-none, footer.card-none {
+    opacity: 0.2;
+}
+main.card-none {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 .slider {
     position: relative;
@@ -313,6 +322,95 @@
     font-weight: 700;
     line-height: 30px;
 }
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 90;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+.modal-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+.card-info {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -50%);
+    bottom: 66%;
+    left: 25vw;
+    height: 50%;
+    aspect-ratio: 16 / 12;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1.5px solid var(--top-bottom-color);
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    padding-top: 1%;
+    width: min(800px, 90vw);
+    max-height: 90vh;
+}
+.card-info__about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 1%;
+}
+.card-info__img {
+    flex-shrink: 0;
+}
+.card-info__img img {
+    border-radius: 3%;
+    width: 25em;
+    height: 25em;
+}
+.card-info__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1%;
+}
+.card-info__heading {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 2.3em;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0px;
+}
+.card-info__description {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font-family);
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+.card-info__connect {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin-top: 10%;
+    width: 100%;
+    height: 30%;
+    flex-shrink: 0;
+}
+.card-info__connect-btn {
+    background-color: var(--top-bottom-color);
+    color: var(--primary-color);
+    width: 20%;
+    height: 20%;
+    border-radius: 5px;
+    font-size: 1.3em;
+    font-family: var(--primary-font-family);
+    transition: background-color 0.3s linear;
+}
+.card-info__connect-btn:hover {
+    background-color: #243055;
+}
 .about {
     margin-left: 17px;
     margin-top: 55px;
@@ -466,6 +564,13 @@
         gap: 24.5px;
     }
 }
+@media screen and (max-width: 850px) {
+    .card-info__connect-btn {
+        width: 100%;
+        height: 30%;
+        margin-right: 3em;
+    }
+}
 @media screen and (max-width: 829px) {
     .popular-goods_small__heading {
         justify-content: center;
@@ -502,6 +607,11 @@
         margin-bottom: -105px;
     }
 }
+@media screen and (max-width: 650px) {
+    .card-info {
+        width: 98vw;
+    }
+}
 @media screen and (max-width: 600px) {
     .about__text_more {
         margin-bottom: -150px;
@@ -519,6 +629,17 @@
     }
     .whole-catalogue {
         font-size: 15px;
+    }
+}
+@media screen and (max-width: 530px) {
+    .card-info__img img {
+        width: 15em;
+        height: 15em;
+    }
+}
+@media screen and (max-width: 480px) {
+    .card-info {
+        flex-wrap: wrap;
     }
 }
 @media screen and (max-width: 400px) {
