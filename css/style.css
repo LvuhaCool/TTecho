@@ -401,7 +401,7 @@ main.card-none {
 .card-info__connect-btn {
     background-color: var(--top-bottom-color);
     color: var(--primary-color);
-    width: 20%;
+    width: 25%;
     height: 20%;
     border-radius: 5px;
     font-size: 1.3em;
