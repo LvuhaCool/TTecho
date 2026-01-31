@@ -399,7 +399,7 @@ main.card-none {
 .card-info__description {
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
-    font-size: 1em;
+    font-size: 1.35em;
     font-weight: 400;
     letter-spacing: 0px;
 }
