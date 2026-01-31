@@ -1,0 +1,11 @@
+@import url("./reset.css");
+@import url("./header.css");
+@import url("./footer.css");
+:root {
+    --primary-color: #fff;
+    --top-bottom-color: #1D2641;
+    --primary-text-color: #161616;
+    --top-bottom-text-color: #fff;
+    --placeholder-text-color: #c0c0c0;
+    --primary-font-family: "Montserrat", sans-serif;
+}

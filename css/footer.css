@@ -53,7 +53,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    row-gap: 15vw;
+    column-gap: 15vw;
     align-items: center;
     padding-left: 96px;
     padding-bottom: 71.25px;
@@ -70,7 +70,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    column-gap: 29px;
+    row-gap: 29px;
     margin-right: 10.6vw;
 }
 .footer__navigation a {
