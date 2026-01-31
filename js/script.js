@@ -230,7 +230,8 @@ const htmlTag = document.querySelector("html");
 const body = document.querySelector("body");
 // Для подсказок при мобильном поиске
 const toolTipContainer = document.querySelector(".search-tool-tips");
-const toolTip = document.querySelector(".tool-tip");
+const toolTip = document.querySelectorAll(".tool-tip");
+const hamburgerInputIcon = document.querySelector(".hamburger-menu__search-icon");
 // Для секции "О нас"
 const moreTextParagraph = document.querySelector(".about__text_more");
 const showMore = document.querySelector(".about__unfold");
@@ -370,13 +371,37 @@ function searchRender() {
     }
 }
 // Мобильный поиск
+function getBestMatches(data, query, limit = 4) {
+    query = query.toLowerCase();
+    return data.filter(item => item.name.toLowerCase().includes(query))
+    .sort((a, b) => {
+        const aStarts = a.name.toLowerCase().startsWith(query);
+        const bStarts = b.name.toLowerCase().startsWith(query);
+        return bStarts - aStarts;
+    })
+    .slice(0, limit);
+}
 function mobileSearch() {
-    if (hamburgerInput.value === "") {
+    const value = hamburgerInput.value.trim().toLowerCase();
+    if (!value) {
         toolTipContainer.classList.remove("tool-tip-container-visible");
+        toolTip.forEach(tip => {
+            tip.style.display = "none";
+        });
+        return;
     }
-    else {
-        toolTipContainer.classList.add("tool-tip-container-visible");
-    };
+    toolTipContainer.classList.add("tool-tip-container-visible");
+    const matches = getBestMatches(data, value, 4);
+    toolTip.forEach((tip, index) => {
+        const match = matches[index];
+        if (!match) {
+            tip.style.display = "none";
+            return;
+        }
+        tip.style.display = "flex";
+        tip.querySelector(".tool-tip__img img").src = match.img;
+        tip.querySelector(".tool-tip__text").textContent = match.name;
+    })
 }
 // Функция удаления кнопки "Еще"
 function hideShowMore() {
@@ -414,7 +439,6 @@ sliderBack.addEventListener("click", sliderEventHandlerBack);
 sliderForward.addEventListener("click", sliderEventHandlerForward);
 // Адаптивное меню-гамбургер
 let hamburgerFun = () => {
-    // adaptiveNav.classList.toggle("visible");
     if (adaptiveNav.classList.contains("visible")) {
         adaptiveNav.classList.remove("visible");
     }

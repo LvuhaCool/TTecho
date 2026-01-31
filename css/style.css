@@ -388,9 +388,6 @@ main.card-none {
     flex-direction: column;
     row-gap: 1%;
 }
-.search-tool-tips {
-    display: none;
-}
 .card-info__heading {
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
