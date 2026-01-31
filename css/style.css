@@ -646,7 +646,7 @@ main.card-none {
 }
 @media screen and (max-width: 560px) {
     .card-info {
-        height: fit-content;
+        height: 100vh;
     }
     .card-info__heading {
         font-size: 18px;
@@ -654,7 +654,10 @@ main.card-none {
     .card-info__about {
         flex-direction: column;
         align-items: center;
-        row-gap: 5px;
+        row-gap: 60px;
+    }
+    .card-info__connect {
+        margin-top: 60px;
     }
 }
 @media screen and (max-width: 400px) {
