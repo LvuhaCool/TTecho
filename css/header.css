@@ -322,3 +322,13 @@ header.header-toggle {
         display: none !important;
     }
 }
+@media screen and (min-width: 2000px) {
+    .header__logo {
+        margin-right: 10vw;
+    }
+}
+@media screen and (min-width: 2250px) {
+    .header__nav {
+        margin-right: 10vw;
+    }
+}
