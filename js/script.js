@@ -224,9 +224,13 @@ let foundCount = 0;
 // Для информации о карточках
 const cardInfoWrapper = document.querySelector(".card-info__wrapper");
 const cardInfo = document.querySelector(".card-info");
+const cardInfoImg = document.querySelector(".card-info__img img");
 const cardInfoHideBtn = document.querySelector(".card-info__exit-img");
 const htmlTag = document.querySelector("html");
 const body = document.querySelector("body");
+// Для подсказок при мобильном поиске
+const toolTipContainer = document.querySelector(".search-tool-tips");
+const toolTip = document.querySelector(".tool-tip");
 // Для секции "О нас"
 const moreTextParagraph = document.querySelector(".about__text_more");
 const showMore = document.querySelector(".about__unfold");
@@ -278,6 +282,7 @@ hamburgerInput.addEventListener("input", () => {
     if (hamburgerInput.value.trim() !== "") {
         toggleContainer.classList.add("toggle-invisible");
         header.classList.add("header-toggle");
+        adaptiveNav.classList.remove("visible");
     } else {
         toggleContainer.classList.remove("toggle-invisible");
         header.classList.remove("header-toggle");
@@ -325,17 +330,13 @@ function render() {
 };
 // Функция поиска
 searchInput.addEventListener("input", searchRender);
-hamburgerInput.addEventListener("input", searchRender);
+hamburgerInput.addEventListener("input", mobileSearch);
 function searchRender() {
-     const query =
-        searchInput.value !== ""
-            ? searchInput.value
-            : hamburgerInput.value;
     showMoreCardsBtn.classList.remove("invisible-show-more");
     foundCount = 0;
     noCardsBlock.classList.remove("visible");
     cardsContainer.innerHTML = "";
-    if (query === "") {
+    if (searchInput.value === "") {
         cardsContainer.innerHTML = "";
         noCardsBlock.classList.remove("visible");
         shownCardsCount = 0;
@@ -343,7 +344,7 @@ function searchRender() {
         return;
     }
     data.forEach((element) => {
-        if (element.name.toLowerCase().includes(query.toLowerCase())) {
+        if (element.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
             foundCount++;
             cardsContainer.insertAdjacentHTML("beforeend", `<div class="card">
                     <div class="card__picture-wrapper">
@@ -368,6 +369,15 @@ function searchRender() {
         shownCardsCount = 0;
     }
 }
+// Мобильный поиск
+function mobileSearch() {
+    if (hamburgerInput.value === "") {
+        toolTipContainer.classList.remove("tool-tip-container-visible");
+    }
+    else {
+        toolTipContainer.classList.add("tool-tip-container-visible");
+    };
+}
 // Функция удаления кнопки "Еще"
 function hideShowMore() {
     showMoreCardsBtn.classList.add("invisible-show-more");
@@ -376,7 +386,11 @@ function hideShowMore() {
 cardsContainer.addEventListener("click", showCardModal);
 function showCardModal(event) {
     const clickedCard = event.target.closest(".card");
-    if (!clickedCard) return;
+    if (!clickedCard) {
+        if (clickedCard != cardInfoImg) {
+            return;
+        };
+    };
     const cardImg = clickedCard.querySelector(".card__picture").src;
     const cardHeading = clickedCard.querySelector(".card__name").textContent;
     const cardDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!";
@@ -400,7 +414,13 @@ sliderBack.addEventListener("click", sliderEventHandlerBack);
 sliderForward.addEventListener("click", sliderEventHandlerForward);
 // Адаптивное меню-гамбургер
 let hamburgerFun = () => {
-    adaptiveNav.classList.toggle("visible");
+    // adaptiveNav.classList.toggle("visible");
+    if (adaptiveNav.classList.contains("visible")) {
+        adaptiveNav.classList.remove("visible");
+    }
+    else {
+        adaptiveNav.classList.add("visible");
+    }
 }
 hamburgerBtn.addEventListener("click", hamburgerFun);
 // Слайдер
@@ -489,13 +509,11 @@ function openAccordion() {
     accordionContainer.classList.add("visible");
     accordionOptions.forEach(el => el.classList.add("visible"));
 }
-
 function closeAccordion() {
     accordionContainer.classList.remove("visible");
     accordionOptions.forEach(el => el.classList.remove("visible"));
 }
 accordionTriggerText.addEventListener("mouseenter", openAccordion);
 accordionTriggerText.addEventListener("mouseleave", closeAccordion);
-
 accordionContainer.addEventListener("mouseenter", openAccordion);
 accordionContainer.addEventListener("mouseleave", closeAccordion);

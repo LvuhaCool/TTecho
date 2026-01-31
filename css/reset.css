@@ -49,6 +49,9 @@ a:hover  {
     text-decoration: none;
 }
 
+.card-info__connect-btn {
+    color: #fff;
+}
 /* Common */
 
 aside, nav, footer, header, section, main {
@@ -72,7 +75,7 @@ img, svg {
 	max-width: 100%;
 	height: auto;
 }
-img, svg, a {
+img, svg {
 	-webkit-tap-highlight-color: transparent;
 }
 

@@ -364,6 +364,7 @@ main.card-none {
 .card-info__exit-img {
     width: 45px;
     height: 45px;
+    cursor: pointer;
 }
 .card-info__exit-img:hover {
     opacity: 0.8;
@@ -386,6 +387,9 @@ main.card-none {
     display: flex;
     flex-direction: column;
     row-gap: 1%;
+}
+.search-tool-tips {
+    display: none;
 }
 .card-info__heading {
     color: var(--primary-text-color);
@@ -413,7 +417,6 @@ main.card-none {
 }
 .card-info__connect-btn {
     background-color: var(--top-bottom-color);
-    color: var(--primary-color);
     width: 25%;
     height: 50%;
     border-radius: 8px;
@@ -423,6 +426,10 @@ main.card-none {
 }
 .card-info__connect-btn:hover {
     background-color: #243055;
+}
+.card-info__connect-btn a {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 .about {
     margin-left: 17px;
