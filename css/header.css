@@ -160,6 +160,7 @@ header.header-toggle {
     row-gap: 0;
     position: absolute;
     left: 15%;
+    overflow-y: hidden;
 }
 .tool-tip {
     width: 75vw;
