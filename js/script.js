@@ -223,6 +223,8 @@ const noCardsBlock = document.querySelector(".no-cards__container");
 let foundCount = 0;
 // Для информации о карточках
 const cardInfoWrapper = document.querySelector(".card-info__wrapper");
+const cardInfo = document.querySelector(".card-info");
+const cardInfoHideBtn = document.querySelector(".card-info__exit-img");
 const htmlTag = document.querySelector("html");
 const body = document.querySelector("body");
 // Для секции "О нас"
@@ -373,30 +375,26 @@ function hideShowMore() {
 // Показ информации о товаре при нажатии на карточку
 cardsContainer.addEventListener("click", showCardModal);
 function showCardModal(event) {
-    cardInfoWrapper.innerHTML = "";
     const clickedCard = event.target.closest(".card");
     if (!clickedCard) return;
     const cardImg = clickedCard.querySelector(".card__picture").src;
     const cardHeading = clickedCard.querySelector(".card__name").textContent;
     const cardDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!";
-    cardInfoWrapper.insertAdjacentHTML("afterbegin", `<div class="card-info">
-                <div class="card-info__about">
-                    <div class="card-info__img">
-                        <img src="${cardImg}">
-                    </div>
-                    <div class="card-info__text">
-                        <h2 class="card-info__heading">${cardHeading}</h2>
-                        <p class="card-info__description">${cardDescription}</p>
-                    </div>
-                </div>
-                <div class="card-info__connect">
-                    <button class="card-info__connect-btn">Связаться с нами</button>
-                </div>
-            </div>`);
+    cardInfoWrapper.querySelector(".card-info__img img").src = cardImg;
+    cardInfoWrapper.querySelector(".card-info__heading").textContent = cardHeading;
+    cardInfoWrapper.querySelector(".card-info__description").textContent = cardDescription;
     document.body.classList.add("card-none");
     htmlTag.classList.add("card-none");
+    cardInfo.classList.add("visible-card-info");
     document.querySelector(".modal-overlay").classList.add("visible");
 };
+cardInfoHideBtn.addEventListener("click", hideCardInfo);
+function hideCardInfo() {
+    document.body.classList.remove("card-none");
+    htmlTag.classList.remove("card-none");
+    cardInfo.classList.remove("visible-card-info");
+    document.querySelector(".modal-overlay").classList.remove("visible");
+}
 // Движение мячика в футере
 sliderBack.addEventListener("click", sliderEventHandlerBack);
 sliderForward.addEventListener("click", sliderEventHandlerForward);

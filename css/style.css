@@ -339,7 +339,6 @@ main.card-none {
     position: fixed;
     z-index: 100;
     top: 50%;
-    left: 50%;
     transform: translate(-25%, -50%);
     bottom: 66%;
     left: 25vw;
@@ -348,12 +347,26 @@ main.card-none {
     background-color: rgba(255, 255, 255, 1);
     border: 1.5px solid var(--top-bottom-color);
     border-radius: 3%;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding-left: 3%;
     padding-top: 1%;
     width: min(800px, 90vw);
     max-height: 90vh;
+}
+.card-info.visible-card-info {
+    display: flex;
+}
+.card-info__exit {
+    align-self: end;
+    margin-right: 5px;
+}
+.card-info__exit-img {
+    width: 45px;
+    height: 45px;
+}
+.card-info__exit-img:hover {
+    opacity: 0.8;
 }
 .card-info__about {
     display: flex;
@@ -403,7 +416,7 @@ main.card-none {
     color: var(--primary-color);
     width: 25%;
     height: 20%;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1.3em;
     font-family: var(--primary-font-family);
     transition: background-color 0.3s linear;
