@@ -655,9 +655,10 @@ main.card-none {
         flex-direction: column;
         align-items: center;
         row-gap: 60px;
+        overflow-y: scroll;
     }
     .card-info__connect {
-        margin-top: 60px;
+        margin-top: 15px;
     }
 }
 @media screen and (max-width: 400px) {
