@@ -349,7 +349,7 @@ main.card-none {
     border-radius: 3%;
     display: none;
     flex-direction: column;
-    padding-left: 3%;
+    padding-left: 1%;
     padding-top: 1%;
     width: min(800px, 90vw);
     max-height: 90vh;
@@ -406,16 +406,16 @@ main.card-none {
     display: flex;
     justify-self: center;
     align-self: center;
-    margin-top: 10%;
+    margin-top: 1%;
     width: 100%;
-    height: 30%;
+    height: 15%;
     flex-shrink: 0;
 }
 .card-info__connect-btn {
     background-color: var(--top-bottom-color);
     color: var(--primary-color);
     width: 25%;
-    height: 20%;
+    height: 50%;
     border-radius: 8px;
     font-size: 1.3em;
     font-family: var(--primary-font-family);
@@ -580,7 +580,7 @@ main.card-none {
 @media screen and (max-width: 850px) {
     .card-info__connect-btn {
         width: 100%;
-        height: 30%;
+        height: 60%;
         margin-right: 3em;
     }
 }
@@ -644,15 +644,17 @@ main.card-none {
         font-size: 15px;
     }
 }
-@media screen and (max-width: 530px) {
-    .card-info__img img {
-        width: 15em;
-        height: 15em;
-    }
-}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
     .card-info {
-        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .card-info__heading {
+        font-size: 18px;
+    }
+    .card-info__about {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
     }
 }
 @media screen and (max-width: 400px) {
