@@ -278,6 +278,19 @@ window.onload = () => {
     });
     changeSlide();
 };
+// Предотвращение багов при изменении размера экрана
+window.addEventListener("resize", resizeHeaderReset);
+function resizeHeaderReset() {
+    searchInput.value = "";
+    render();
+    hamburgerInput.value = "";
+    adaptiveNav.classList.remove("visible");
+    toolTip.forEach((element) => {
+        element.style.display = "none";
+    })
+    toggleContainer.classList.remove("toggle-invisible");
+    header.classList.remove("header-toggle");
+};
 // Скрытие .toggle при введение чего-либо в поле на мобиле
 hamburgerInput.addEventListener("input", () => {
     if (hamburgerInput.value.trim() !== "") {
