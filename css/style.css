@@ -118,6 +118,9 @@ main.card-none {
     margin-top: 8px;
     margin-left: 3.5px;
 }
+.popular-accordion h2, .popular-accordion h2 img {
+    cursor: pointer;
+}
 .popular-accordion__show-hide {
     display: flex;
     flex-direction: column;

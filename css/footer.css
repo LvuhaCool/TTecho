@@ -1,11 +1,12 @@
 footer {
-    padding-top: 16px;
+    padding-top: 32px;
     width: 100%;
     background-color: var(--top-bottom-color);
     color: var(--top-bottom-text-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: padding-top 0.15s linear;
 }
 .footer-ball {
     width: 30px;
@@ -15,6 +16,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -40px;
     transform: translate3d(var(--mouseX, 0), var(--mouseY, 0), 0);
     z-index: 10;
     transition: transform 0.3s linear, width 0.15s linear, height 0.15s linear;
@@ -58,7 +60,7 @@ footer {
     column-gap: 15vw;
     align-items: center;
     padding-left: 96px;
-    padding-bottom: 71.25px;
+    padding-bottom: 64.25px;
 }
 .footer-ball.ball-hover {
     width: 45px;
@@ -109,6 +111,24 @@ footer {
 }
 .footer__navigation_goods a + a {
     margin-top: 3px;
+}
+.footer-socials__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 28px;
+}
+.footer-socials__wrapper img {
+    transition: 0.15s linear;
+    transition-property: opacity, backgroung-color;
+}
+.footer-socials__wrapper img:hover {
+    opacity: 0.9;
+    background-color: rgba(29, 38, 65, 0.9);
+}
+.footer-socials__wrapper img[alt="TikTok"] {
+    margin-left: -13px;
 }
 @media screen and (max-width: 1255px) {
     .footer-flex-wrap {
