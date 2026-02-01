@@ -246,6 +246,13 @@ const cardsContainer = document.querySelector(".cards");
 // Для футера
 const footer = document.querySelector("footer");
 const ball = document.querySelector(".footer-ball");
+const footerLogo = document.querySelector(".footer__logo");
+const footerNavigation = document.querySelector(".footer__navigation");
+const footerBall = document.querySelector(".footer-ball");
+const footerBallButterfly = document.querySelector(".footer-ball__butterfly");
+const ballButterflyArr = [footerBall, footerBallButterfly];
+const footerBallWings = document.querySelectorAll(".footer-ball__wing");
+// Движение мячика в футере
 let targetX = 0;
 let targetY = 0;
 let xPos = 0;
@@ -267,6 +274,45 @@ if (isMobile) {
     ball.classList.add("mobile-hidden");
 }
 animate();
+// Увеличение размера мячика при ховере
+footerLogo.addEventListener("mouseenter", resizeBallFun);
+footerLogo.addEventListener("mouseleave", resizeBallBackFun);
+function resizeBallFun() {
+    ballButterflyArr.forEach((element) => {
+        if (element.classList.contains("ball-hover")) {
+            return;
+        }
+        else {
+            element.classList.add("ball-hover");
+        };
+    })
+    footerBallWings.forEach((element) => {
+        if (element.classList.contains("ball-hover")) {
+            return;
+        } else {
+            element.classList.add("ball-hover");
+        }
+    })
+};
+footerNavigation.addEventListener("mouseenter", resizeBallFun);
+footerNavigation.addEventListener("mouseleave", resizeBallBackFun);
+function resizeBallBackFun() {
+    ballButterflyArr.forEach((element) => {
+        if (element.classList.contains("ball-hover")) {
+            element.classList.remove("ball-hover");
+        }
+        else {
+            return;
+        };
+    })
+    footerBallWings.forEach((element) => {
+        if (element.classList.contains("ball-hover")) {
+            element.classList.remove("ball-hover");
+        } else {
+            return;
+        }
+    })
+}
 // Проверка на мобильное устройство или десктоп
 window.onload = () => {
     if (isMobile) {
