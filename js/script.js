@@ -279,8 +279,9 @@ window.onload = () => {
     changeSlide();
 };
 // Предотвращение багов при изменении размера экрана
-window.addEventListener("resize", resizeHeaderReset);
-function resizeHeaderReset() {
+window.addEventListener("resize", HeaderReset);
+screen.orientation.addEventListener("change", HeaderReset);
+function HeaderReset() {
     searchInput.value = "";
     cardsContainer.innerHTML = "";
     foundCount = 0;
