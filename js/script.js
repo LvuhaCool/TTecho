@@ -403,6 +403,30 @@ function mobileSearch() {
         tip.querySelector(".tool-tip__text").textContent = match.name;
     })
 }
+// Показ инфы о карточках при нажатии на всплывающие подсказки
+toolTipContainer.addEventListener("click", toolTipClick);
+function toolTipClick(e) {
+    const clickedToolTip = e.target.closest(".tool-tip");
+    if (!clickedToolTip) {
+        return;
+    };
+    let cardDescriptionTT;
+    cardDescriptionTT = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!";
+    // data.forEach((element) => {
+    //     if (clickedToolTip.querySelector(".tool-tip__img img").src = element.img) {
+    //         cardDescriptionTT = element.description;
+    //     }
+    // })
+    const cardImageTT = clickedToolTip.querySelector(".tool-tip__img img").src;
+    const cardNameTT = clickedToolTip.querySelector(".tool-tip__text").textContent;
+    cardInfoWrapper.querySelector(".card-info__img img").src = cardImageTT;
+    cardInfoWrapper.querySelector(".card-info__heading").textContent = cardNameTT;
+    cardInfoWrapper.querySelector(".card-info__description").textContent = cardDescriptionTT;
+    document.body.classList.add("card-none");
+    htmlTag.classList.add("card-none");
+    cardInfo.classList.add("visible-card-info");
+    document.querySelector(".modal-overlay").classList.add("visible");
+}
 // Функция удаления кнопки "Еще"
 function hideShowMore() {
     showMoreCardsBtn.classList.add("invisible-show-more");
