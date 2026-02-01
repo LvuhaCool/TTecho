@@ -336,7 +336,8 @@ main.card-none {
     pointer-events: auto;
 }
 .card-info {
-    position: absolute;
+    position: fixed;
+    inset: 0;
     z-index: 1000;
     width: 100%;
     height: 100%;
@@ -347,7 +348,8 @@ main.card-none {
     padding-left: 1%;
     padding-top: 1%;
     bottom: 0.7%;
-    overflow-y: scroll;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .card-info.visible-card-info {
     display: flex;
@@ -376,9 +378,13 @@ main.card-none {
 }
 .card-info__img img {
     border-radius: 3%;
-    width: 75%;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
     aspect-ratio: 1 / 1;
-    box-sizing: content-box;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
 }
 .card-info__text {
     display: flex;
@@ -641,6 +647,9 @@ main.card-none {
     }
 }
 @media screen and (max-width: 560px) {
+    .card-info {
+        padding: 16px;
+    }
     .card-info__heading {
         font-size: 18px;
     }
@@ -649,6 +658,7 @@ main.card-none {
         align-items: center;
         row-gap: 60px;
         overflow-y: scroll;
+        row-gap: 24px;
     }
     .card-info__connect {
         margin-top: 15px;
