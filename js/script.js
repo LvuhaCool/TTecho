@@ -332,8 +332,6 @@ showMoreCardsBtn.addEventListener("click", render);
 function render() {
      if (searchInput.value != "" && cardsContainer.innerHTML != "" || hamburgerInput.value != "" && cardsContainer.innerHTML != "") {
         cardsContainer.innerHTML = "";
-        searchInput.value = "";
-        hamburgerInput.value = "";
     }
     const currentArray = data.slice(shownCardsCount, shownCardsCount + showCardsStep);
     currentArray.forEach((element) => {
@@ -466,11 +464,7 @@ function hideShowMore() {
 cardsContainer.addEventListener("click", showCardModal);
 function showCardModal(event) {
     const clickedCard = event.target.closest(".card");
-    if (!clickedCard) {
-        if (clickedCard != cardInfoImg) {
-            return;
-        };
-    };
+    if (!clickedCard) return;
     const cardImg = clickedCard.querySelector(".card__picture").src;
     const cardHeading = clickedCard.querySelector(".card__name").textContent;
     const cardDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!";
