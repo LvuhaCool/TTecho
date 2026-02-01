@@ -439,6 +439,9 @@ function mobileSearch() {
 // Показ инфы о карточках при нажатии на всплывающие подсказки
 toolTipContainer.addEventListener("pointerdown", toolTipClick);
 function toolTipClick(e) {
+    setTimeout(() => {
+        hamburgerInput.blur();
+    }, 155);
     e.preventDefault();
     const clickedToolTip = e.target.closest(".tool-tip");
     if (!clickedToolTip) {
