@@ -347,7 +347,7 @@ main.card-none {
     padding-left: 1%;
     padding-top: 1%;
     bottom: 0.7%;
-    overflow-y: visible;
+    overflow-y: scroll;
 }
 .card-info.visible-card-info {
     display: flex;
