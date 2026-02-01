@@ -282,7 +282,11 @@ window.onload = () => {
 window.addEventListener("resize", resizeHeaderReset);
 function resizeHeaderReset() {
     searchInput.value = "";
+    cardsContainer.innerHTML = "";
+    foundCount = 0;
+    shownCardsCount = 0;
     render();
+    noCardsBlock.classList.remove("visible");
     hamburgerInput.value = "";
     adaptiveNav.classList.remove("visible");
     toolTip.forEach((element) => {
