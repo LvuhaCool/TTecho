@@ -295,6 +295,19 @@ function resizeHeaderReset() {
     toggleContainer.classList.remove("toggle-invisible");
     header.classList.remove("header-toggle");
 };
+// Скрытие подсказок при фокусауте input
+hamburgerInput.addEventListener("focusout", inputHideToolTips);
+hamburgerInput.addEventListener("focus", inputShowToolTips);
+function inputHideToolTips() {
+    toolTip.forEach((element) => {
+        element.style.display = "none";
+    })
+}
+function inputShowToolTips() {
+    toolTip.forEach((element) => {
+        element.style.display = "flex";
+    })
+}
 // Скрытие .toggle при введение чего-либо в поле на мобиле
 hamburgerInput.addEventListener("input", () => {
     if (hamburgerInput.value.trim() !== "") {
