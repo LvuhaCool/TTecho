@@ -301,7 +301,11 @@ hamburgerInput.addEventListener("focusout", inputHideToolTips);
 hamburgerInput.addEventListener("focus", inputShowToolTips);
 function inputHideToolTips() {
     toolTip.forEach((element) => {
-        element.style.display = "none";
+        setTimeout(() => {
+            toolTip.forEach((element) => {
+                element.style.display = "none";
+            });
+        }, 150);
     })
 }
 function inputShowToolTips() {
@@ -433,8 +437,9 @@ function mobileSearch() {
     })
 }
 // Показ инфы о карточках при нажатии на всплывающие подсказки
-toolTipContainer.addEventListener("click", toolTipClick);
+toolTipContainer.addEventListener("pointerdown", toolTipClick);
 function toolTipClick(e) {
+    e.preventDefault();
     const clickedToolTip = e.target.closest(".tool-tip");
     if (!clickedToolTip) {
         return;
