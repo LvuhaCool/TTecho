@@ -509,7 +509,6 @@ hamburgerInput.addEventListener("keyup", (event) => {
 document.addEventListener("DOMContentLoaded", render);
 showMoreCardsBtn.addEventListener("click", render);
 function render() {
-    if (searchInput.value || hamburgerInput.value) return;
     const currentArray = data.slice(shownCardsCount, shownCardsCount + showCardsStep);
     currentArray.forEach((element) => {
         cardsContainer.insertAdjacentHTML("beforeend",
