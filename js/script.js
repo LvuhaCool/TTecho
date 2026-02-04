@@ -456,8 +456,6 @@ let resizeTimer;
 function HeaderReset() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-        searchInput.value = "";
-        hamburgerInput.value = "";
         cardsContainer.innerHTML = "";
         foundCount = 0;
         shownCardsCount = 0;
