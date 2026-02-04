@@ -258,12 +258,15 @@ const shoeLink = document.querySelectorAll(".shoe");
 const clothingLink = document.querySelectorAll(".clothing");
 const showWholeCatalogue = document.querySelector(".whole-catalogue h2");
 const showWholeCatalogueMobile = document.querySelector(".popular-goods_small__main-heading--sub");
+let activeCategory = null;
 showWholeCatalogue.addEventListener("click", () => {
+    activeCategory = null;
     cardsContainer.innerHTML = "";
     shownCardsCount = 0;
     render();
 });
 showWholeCatalogueMobile.addEventListener("click", () => {
+    activeCategory = null;
     cardsContainer.innerHTML = "";
     shownCardsCount = 0;
     render();
@@ -289,10 +292,11 @@ clothingLink.forEach(element => {
     })
 })
 function renderCategory(type) {
+    activeCategory = type;
     cardsContainer.innerHTML = "";
     hideShowMore();
     data.forEach((element) => {
-        if (type == element.type) {
+        if (type === element.type) {
             cardsContainer.insertAdjacentHTML("beforeend",
             `<div class="card" data-id="${element.id}">
     <div class="card__picture-wrapper">
@@ -459,7 +463,15 @@ function HeaderReset() {
         cardsContainer.innerHTML = "";
         foundCount = 0;
         shownCardsCount = 0;
-        render();
+        if (searchInput.value.trim()) {
+            searchRender();
+        }
+        else if (activeCategory) {
+            renderCategory(activeCategory);
+        }
+        else {
+            render();
+        };
         noCardsBlock.classList.remove("visible");
         adaptiveNav.classList.remove("visible");
         toggleContainer.classList.remove("toggle-invisible");
