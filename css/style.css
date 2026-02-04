@@ -9,7 +9,10 @@
     --placeholder-text-color: #c0c0c0;
     --primary-font-family: "Montserrat", sans-serif;
 }
- html.card-none, body.card-none {
+body {
+    transition: all 0.1s linear;
+}
+html.card-none, body.card-none {
     overflow-y: hidden;
 }
 header.card-none, footer.card-none {
@@ -91,6 +94,7 @@ main.card-none {
     font-weight: 700;
     line-height: 39px;
     letter-spacing: 0px;
+    cursor: pointer;
 }
 .popular-goods_small__main-heading--sub {
     display: none;
@@ -160,6 +164,11 @@ main.card-none {
 .popular-accordion__option {
     z-index: 1000;
     visibility: hidden;
+    cursor: pointer;
+    width: fit-content;
+}
+.popular-accordion__option:hover {
+    border-bottom: 0.6px solid var(--primary-color);
 }
 .popular-accordion__option.visible {
     opacity: 1;
@@ -183,7 +192,7 @@ main.card-none {
     margin-left: 8vw;
     padding-top: 3px;
 }
-.whole-catalogue a h2 {
+.whole-catalogue h2 {
     color: rgb(33, 33, 33);
     font-family: var(--primary-font-family);
     font-size: 25px;
@@ -191,8 +200,9 @@ main.card-none {
     line-height: 32px;
     letter-spacing: 0px;
     transition: opacity 0.15s linear;
+    cursor: pointer;
 }
-.whole-catalogue a h2:hover {
+.whole-catalogue h2:hover {
     opacity: 0.9;
     border-bottom: 1px solid var(--primary-text-color);
 }

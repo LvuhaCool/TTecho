@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,25 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="hamburger-menu">
             <div class="toggle">
                 <div class="hamburger-menu__logo">
-                    <a href="./index.html"><img src="./img/tablet-logo.png" alt="TTecho" class="hamburger-menu__logo-img"></a>
+                    <a href="./index.html"><img src="./img/tablet-logo.png" alt="TTecho"
+                            class="hamburger-menu__logo-img"></a>
                 </div>
                 <div class="hamburger-menu__symbol">
                     <button class="hamburger-menu__btn">&#9776;</button>
                 </div>
             </div>
             <div class="hamburger-menu__search">
-                <input type="text" class="hamburger-menu__input" placeholder="Ищите товары здесь..." id="mainHamburgerSearch">
+                <input type="text" class="hamburger-menu__input" placeholder="Ищите товары здесь..."
+                    id="mainHamburgerSearch">
                 <img src="./img/search-icon.png" class="hamburger-menu__search-icon">
             </div>
             <div class="search-tool-tips">
@@ -57,7 +62,6 @@
         <div class="header__main">
             <nav class="header__nav">
                 <a href="./index.html">Главная</a>
-                <a href="./pages/catalogue.html">Каталог</a>
                 <a href="https://t.me/ttechott" target="_blank" class="fit">Связаться с нами</a>
             </nav>
             <div class="header__search">
@@ -68,37 +72,39 @@
     <nav class="hamburger-menu__nav">
         <div class="hamburger-menu__links-container">
             <a href="./index.html">Главная</a>
-            <a href="./pages/catalogue.html">Каталог</a>
             <a href="https://t.me/ttechott" target="_blank" class="fit">Связаться с нами</a>
         </div>
     </nav>
     <main>
-        <section class="popular-goods_small">
-            <div class="popular-goods_small__heading">
-                <h2 class="popular-goods_small__main-heading">Каталог</h2>
-                <div class="popular-accordion">
-                    <h2 id="accordionHeading">Популярное<img src="./img/main-page-popular-unfold.png" id="accordionImg"></h2>
-                    <div class="popular-accordion__show-hide">
-                        <span class="popular-accordion__option">Основания</span>
-                        <span class="popular-accordion__option">Накладки</span>
-                        <span class="popular-accordion__option">Обувь</span>
-                        <span class="popular-accordion__option">Спортивная форма</span>
+        <a name="cards-section-anchor">
+            <section class="popular-goods_small">
+                <div class="popular-goods_small__heading">
+                    <h2 class="popular-goods_small__main-heading">Каталог</h2>
+                    <div class="popular-accordion">
+                        <h2 id="accordionHeading">Популярное<img src="./img/main-page-popular-unfold.png"
+                                id="accordionImg"></h2>
+                        <div class="popular-accordion__show-hide">
+                            <span class="popular-accordion__option blade">Основания</span>
+                            <span class="popular-accordion__option rubber">Накладки</span>
+                            <span class="popular-accordion__option shoe">Обувь</span>
+                            <span class="popular-accordion__option clothing">Спортивная форма</span>
+                        </div>
+                    </div>
+                    <h2 class="popular-goods_small__main-heading--sub">Каталог</h2>
+                    <div class="whole-catalogue">
+                        <h2>Показать полный каталог</h2>
                     </div>
                 </div>
-                <a href="./pages/catalogue.html"><h2 class="popular-goods_small__main-heading--sub">Каталог</h2></a>
-                <div class="whole-catalogue">
-                    <a href="./pages/catalogue.html"><h2>Показать полный каталог</h2></a>
+                <div class="cards"></div>
+                <div class="no-cards__container">
+                    <div class="no-cards__heading">Нет совпадений...</div>
+                    <div class="no-cards__follow-up">Попробуйте что-то другое.</div>
                 </div>
-            </div>
-            <div class="cards"></div>
-            <div class="no-cards__container">
-                <div class="no-cards__heading">Нет совпадений...</div>
-                <div class="no-cards__follow-up">Попробуйте что-то другое.</div>
-            </div>
-            <div class="cards__show-more-btn-container">
-                <button class="cards__show-more-btn">Еще</button>
-            </div>
-        </section>
+                <div class="cards__show-more-btn-container">
+                    <button class="cards__show-more-btn">Еще</button>
+                </div>
+            </section>
+        </a>
         <section class="slider">
             <button class="slider__back-btn"><img src="./img/slider-arrow.png" alt="Назад"></button>
             <img src="./img/slider-images/first.webp" alt="Картинка" class="slider__img">
@@ -113,15 +119,23 @@
                 <h1>Кто мы такие</h1>
             </div>
             <div class="about__text">
-                <p class="about__text_less">Cras ac est sed tellus venenatis laoreet eget at est. Aenean pellentesque dignissim metus egestas euismod. Nam molestie ac turpis et imperdiet. Donec pulvinar, ex in tincidunt tincidunt, nulla metus blandit neque, et semper felis elit id mauris. In turpis elit, lacinia eu mauris id, malesuada egestas diam. Cras ac est sed tellus venenatis laoreet eget at est. Aenean pellentesque dignissim metus egestas euismod. Nam molestie ac turpis et imperdiet.<button class="about__unfold"><img src="./img/about-unfold.png" alt="Показать больше"></button></p>
-                <p class="about__text_more">Cras ac est sed tellus venenatis laoreet eget at est. Aenean pellentesque dignissim metus egestas euismod. Nam molestie ac turpis et imperdiet. Donec pulvinar, ex in tincidunt tincidunt, nulla metus blandit neque, et semper felis elit id mauris.<button class="about__fold"><img src="./img/about-fold.png" alt="Обратно"></button></p>
+                <p class="about__text_less">Cras ac est sed tellus venenatis laoreet eget at est. Aenean pellentesque
+                    dignissim metus egestas euismod. Nam molestie ac turpis et imperdiet. Donec pulvinar, ex in
+                    tincidunt tincidunt, nulla metus blandit neque, et semper felis elit id mauris. In turpis elit,
+                    lacinia eu mauris id, malesuada egestas diam. Cras ac est sed tellus venenatis laoreet eget at est.
+                    Aenean pellentesque dignissim metus egestas euismod. Nam molestie ac turpis et imperdiet.<button
+                        class="about__unfold"><img src="./img/about-unfold.png" alt="Показать больше"></button></p>
+                <p class="about__text_more">Cras ac est sed tellus venenatis laoreet eget at est. Aenean pellentesque
+                    dignissim metus egestas euismod. Nam molestie ac turpis et imperdiet. Donec pulvinar, ex in
+                    tincidunt tincidunt, nulla metus blandit neque, et semper felis elit id mauris.<button
+                        class="about__fold"><img src="./img/about-fold.png" alt="Обратно"></button></p>
             </div>
         </section>
     </main>
     <div class="modal-overlay"></div>
     <div class="card-info__wrapper">
         <div class="card-info">
-             <div class="card-info__exit">
+            <div class="card-info__exit">
                 <img src="./img/exit-cross.jpg" alt="Выйти" class="card-info__exit-img">
             </div>
             <div class="card-info__about">
@@ -135,7 +149,8 @@
                 </div>
             </div>
             <div class="card-info__connect">
-                <button class="card-info__connect-btn"><a href="https://t.me/ttechott" target="_blank">Связаться с нами</a></button>
+                <button class="card-info__connect-btn"><a href="https://t.me/ttechott" target="_blank">Связаться с
+                        нами</a></button>
             </div>
         </div>
     </div>
@@ -157,10 +172,10 @@
                     <a href="#!">Главная</a>
                 </div>
                 <div class="footer__navigation_goods">
-                    <a href="#!">Основания</a>
-                    <a href="#!">Накладки</a>
-                    <a href="#!">Обувь</a>
-                    <a href="#!">Спортивная форма</a>
+                    <a href="#cards-section-anchor" class="blade">Основания</a>
+                    <a href="#cards-section-anchor" class="rubber">Накладки</a>
+                    <a href="#cards-section-anchor" class="shoe">Обувь</a>
+                    <a href="#cards-section-anchor" class="clothing">Спортивная форма</a>
                 </div>
             </div>
         </div>
@@ -176,4 +191,5 @@
     </footer>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

@@ -9,6 +9,7 @@ const data = [
         price: "8000",
         inactivePrice: "10000₽",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 1,
@@ -18,6 +19,7 @@ const data = [
         price: "9000",
         inactivePrice: "11000₽",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 2,
@@ -27,6 +29,7 @@ const data = [
         price: "7000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 3,
@@ -36,6 +39,7 @@ const data = [
         price: "9000",
         inactivePrice: "10000₽",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 4,
@@ -45,6 +49,7 @@ const data = [
         price: "15000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "blade",
     },
     {
         id: 5,
@@ -54,6 +59,7 @@ const data = [
         price: "20000",
         inactivePrice: "21000₽",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "blade",
     },
     {
         id: 6,
@@ -63,6 +69,7 @@ const data = [
         price: "21500",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "blade",
     },
     {
         id: 7,
@@ -72,6 +79,7 @@ const data = [
         price: "9000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 8,
@@ -81,6 +89,7 @@ const data = [
         price: "8000",
         inactivePrice: "8500₽",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 9,
@@ -90,6 +99,7 @@ const data = [
         price: "12000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "shoe",
     },
     {
         id: 10,
@@ -99,6 +109,7 @@ const data = [
         price: "13000",
         inactivePrice: "15000₽",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "shoe",
     },
     {
         id: 11,
@@ -108,6 +119,7 @@ const data = [
         price: "15000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 12,
@@ -117,6 +129,7 @@ const data = [
         price: "8000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 13,
@@ -126,6 +139,7 @@ const data = [
         price: "8000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 14,
@@ -135,6 +149,7 @@ const data = [
         price: "6000",
         inactivePrice: "6500₽",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "blade",
     },
     {
         id: 15,
@@ -144,6 +159,7 @@ const data = [
         price: "15000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "shoe",
     },
     {
         id: 16,
@@ -153,6 +169,7 @@ const data = [
         price: "7500",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 17,
@@ -162,6 +179,7 @@ const data = [
         price: "4000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 18,
@@ -171,6 +189,7 @@ const data = [
         price: "6000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 19,
@@ -180,6 +199,7 @@ const data = [
         price: "9000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "blade",
     },
     {
         id: 20,
@@ -189,6 +209,7 @@ const data = [
         price: "10000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "blade",
     },
     {
         id: 21,
@@ -198,6 +219,7 @@ const data = [
         price: "8000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 22,
@@ -207,6 +229,7 @@ const data = [
         price: "12000",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "blade",
     },
     {
         id: 23,
@@ -216,6 +239,7 @@ const data = [
         price: "4500",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "rubber",
     },
     {
         id: 24,
@@ -225,8 +249,69 @@ const data = [
         price: "7500",
         inactivePrice: "",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
+        type: "blade",
     },
 ];
+const bladeLink = document.querySelectorAll(".blade");
+const rubberLink = document.querySelectorAll(".rubber");
+const shoeLink = document.querySelectorAll(".shoe");
+const clothingLink = document.querySelectorAll(".clothing");
+const showWholeCatalogue = document.querySelector(".whole-catalogue h2");
+const showWholeCatalogueMobile = document.querySelector(".popular-goods_small__main-heading--sub");
+showWholeCatalogue.addEventListener("click", () => {
+    cardsContainer.innerHTML = "";
+    shownCardsCount = 0;
+    render();
+});
+showWholeCatalogueMobile.addEventListener("click", () => {
+    cardsContainer.innerHTML = "";
+    shownCardsCount = 0;
+    render();
+});
+bladeLink.forEach(element => {
+    element.addEventListener("click", () => {
+        renderCategory("blade");
+    })
+})
+rubberLink.forEach(element => {
+    element.addEventListener("click", () => {
+        renderCategory("rubber");
+    })
+})
+shoeLink.forEach(element => {
+    element.addEventListener("click", () => {
+        renderCategory("shoe");
+    })
+})
+clothingLink.forEach(element => {
+    element.addEventListener("click", () => {
+        renderCategory("clothing");
+    })
+})
+function renderCategory(type) {
+    cardsContainer.innerHTML = "";
+    hideShowMore();
+    data.forEach((element) => {
+        if (type == element.type) {
+            cardsContainer.insertAdjacentHTML("beforeend",
+            `<div class="card" data-id="${element.id}">
+    <div class="card__picture-wrapper">
+        <img src="${element.img}" alt="${element.alt}" class="card__picture">
+    </div>
+    <div class="card__content">
+        <span class="card__name">${element.name}</span>
+        <div class="card__prices">
+            <div class="card__price active">${element.price}₽</div>
+            ${element.inactivePrice
+                ? `<div class="card__price inactive">${element.inactivePrice}</div>`
+                : ""}
+        </div>
+    </div>
+</div>`
+        );
+        }
+    })
+}
 let shownCardsCount = 0;
 let showCardsStep = 12;
 // Определение мобильного устройтсва
@@ -389,7 +474,7 @@ hamburgerInput.addEventListener("focus", inputShowToolTips);
 function inputHideToolTips() {
     toolTip.forEach((element) => {
         setTimeout(() => {
-            toolTip.forEach((element) => {
+            element.forEach((element) => {
                 element.style.display = "none";
             });
         }, 150);
