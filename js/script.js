@@ -517,7 +517,12 @@ hamburgerInput.addEventListener("keyup", (event) => {
 })
 // Render
 document.addEventListener("DOMContentLoaded", render);
-showMoreCardsBtn.addEventListener("click", render);
+showMoreCardsBtn.blur();
+showMoreCardsBtn.addEventListener("click", () => {
+    const scrollY = window.scrollY;
+    render();
+    window.scrollTo({ top: scrollY });
+});
 function render() {
     const currentArray = data.slice(shownCardsCount, shownCardsCount + showCardsStep);
     currentArray.forEach((element) => {
