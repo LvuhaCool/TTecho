@@ -157,9 +157,9 @@ header.header-toggle {
     z-index: 100;
     justify-content: center;
     align-items: center;
-    row-gap: 0;
+    row-gap: 1px;
     position: absolute;
-    left: 15%;
+    left: 12%;
     overflow-y: hidden;
 }
 .tool-tip {
@@ -167,7 +167,7 @@ header.header-toggle {
     height: fit-content;
     background-color: #fff;
     border: 0.6px solid #888;
-    border-radius: 8px;
+    border-radius: 17px;
     cursor: pointer;
 }
 .tool-tip__img {
