@@ -215,6 +215,14 @@ const sliderDotContainer = document.querySelector(".slider-dots");
 let touchStartX = 0;
 let touchEndX = 0;
 const swipeThreshold = 50;
+let startX = 0;
+let startY = 0;
+let currentX = 0;
+let deltaX = 0;
+let startTime = 0;
+let isDragging = false;
+const DISTANCE_RATIO = 0.35;
+const VELOCITY_THRESHOLD = 0.35;
 // Для меню
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
@@ -330,7 +338,9 @@ window.onload = () => {
 };
 // Предотвращение багов при изменении размера экрана
 window.addEventListener("resize", HeaderReset);
-screen.orientation.addEventListener("change", HeaderReset);
+if (screen.orientation) {
+    screen.orientation.addEventListener("change", HeaderReset);
+}
 function HeaderReset() {
     searchInput.value = "";
     cardsContainer.innerHTML = "";
@@ -569,10 +579,54 @@ function sliderEventHandlerForward() {
 }
 slider.addEventListener("touchstart", (e) => {
     touchStartX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    startTime = Date.now();
+    isDragging = true;
+    sliderImg.forEach(img => {
+        img.style.transition = "none";
+    });
 }, { passive: true });
-slider.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-    handleSwipe();
+slider.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const diffX = currentX - startX;
+    const diffY = currentY - startY;
+    if (Math.abs(diffY) > Math.abs(diffX)) {
+        isDragging = false;
+        return;
+    }
+    deltaX = diffX;
+    sliderImg.forEach((img, index) => {
+        img.style.transform = `translateX(${(index - currentSliderIndex) * 100}% + ${deltaX}px)`;
+    });
+}, { passive: true });
+slider.addEventListener("touchend", () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    const elapsedTime = Date.now() - startTime;
+    const velocity = Math.abs(deltaX) / elapsedTime;
+    const slideWidth = slider.offsetWidth;
+
+    sliderImg.forEach(img => {
+        img.style.transition = "transform 0.3s ease";
+    });
+
+    if (
+        Math.abs(deltaX) > slideWidth * DISTANCE_RATIO ||
+        velocity > VELOCITY_THRESHOLD
+    ) {
+        if (deltaX < 0) {
+            sliderForwardFun();
+        } else {
+            sliderBackFun();
+        }
+    }
+
+    dotChanging();
+    changeSlide();
 });
 function handleSwipe() {
     const deltaX = touchStartX - touchEndX;
