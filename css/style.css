@@ -28,6 +28,7 @@ main.card-none {
     aspect-ratio: 16 / 9;
     transition: margin-top 0.1s linear;
     margin-top: 55px;
+    touch-action: pan-y;
 }
 .slider__img {
     position: absolute;

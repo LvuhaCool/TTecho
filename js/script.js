@@ -207,10 +207,14 @@ let showCardsStep = 12;
 // Определение мобильного устройтсва
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 // Для слайдера
+const slider = document.querySelector(".slider");
 const sliderImg = Array.from(document.querySelectorAll(".slider__img"));
 const sliderBack = document.querySelector(".slider__back-btn");
 const sliderForward = document.querySelector(".slider__forward-btn");
 const sliderDotContainer = document.querySelector(".slider-dots");
+let touchStartX = 0;
+let touchEndX = 0;
+const swipeThreshold = 50;
 // Для меню
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
@@ -563,6 +567,25 @@ function sliderEventHandlerForward() {
     dotChanging();
     changeSlide();
 }
+slider.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+}, { passive: true });
+slider.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
+function handleSwipe() {
+    const deltaX = touchStartX - touchEndX;
+    if (Math.abs(deltaX) < swipeThreshold) return;
+    if (deltaX > 0) {
+        sliderForwardFun();
+    } else {
+        sliderBackFun();
+    }
+    dotChanging();
+    changeSlide();
+}
+
 // Точки для слайдера, меняющие цвет
 function addSliderDots() {
     sliderDotContainer.insertAdjacentHTML("beforeend", '<div class="slider-dot"></div>');
