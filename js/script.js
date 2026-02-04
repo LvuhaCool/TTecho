@@ -471,6 +471,9 @@ function HeaderReset() {
 // Скрытие подсказок при фокусауте input
 hamburgerInput.addEventListener("focusout", inputHideToolTips);
 hamburgerInput.addEventListener("focus", inputShowToolTips);
+if (hamburgerInput.value == "") {
+    inputHideToolTips();
+}
 function inputHideToolTips() {
     toolTip.forEach((element) => {
         setTimeout(() => {
