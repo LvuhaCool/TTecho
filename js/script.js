@@ -453,6 +453,7 @@ function render() {
 searchInput.addEventListener("input", searchRender);
 hamburgerInput.addEventListener("input", mobileSearch);
 function searchRender() {
+    hideShowMore();
     showMoreCardsBtn.classList.remove("invisible-show-more");
     foundCount = 0;
     noCardsBlock.classList.remove("visible");
@@ -489,9 +490,9 @@ function searchRender() {
     }
     else {
         noCardsBlock.classList.remove("visible");
-        shownCardsCount = 0;
-    }
-}
+        hideShowMore();
+    };
+};
 // Мобильный поиск
 function getBestMatches(data, query, limit = 4) {
     query = query.toLowerCase();
