@@ -252,8 +252,8 @@ const VELOCITY_THRESHOLD = 0.35;
 const hamburgerBtn = document.querySelector(".hamburger-menu__btn");
 const adaptiveNav = document.querySelector(".hamburger-menu__nav");
 // Для поиска
-const searchInput = document.querySelector(".header__input");
-const hamburgerInput = document.querySelector(".hamburger-menu__input");
+const searchInput = document.querySelector("#mainSearch");
+const hamburgerInput = document.querySelector("#mainHamburgerSearch");
 const toggleContainer = document.querySelector(".toggle");
 const header = document.querySelector("header");
 const noCardsBlock = document.querySelector(".no-cards__container");
@@ -534,14 +534,14 @@ function toolTipClick(e) {
     }, 155);
     e.preventDefault();
     const clickedToolTip = e.target.closest(".tool-tip");
-    if (!clickedToolTip) {
-        return;
-    };
-    const cardImageTT = clickedToolTip.querySelector(".tool-tip__img img").src;
+    if (!clickedToolTip) return;
     const cardNameTT = clickedToolTip.querySelector(".tool-tip__text").textContent;
-    cardInfoWrapper.querySelector(".card-info__img img").src = cardImageTT;
-    cardInfoWrapper.querySelector(".card-info__heading").textContent = cardNameTT;
-    cardInfoWrapper.querySelector(".card-info__description").textContent = cardDescriptionTT;
+    const cardData = data.find(item => item.name === cardNameTT);
+    if (!cardData) return;
+    cardInfoWrapper.querySelector(".card-info__img img").src = cardData.img;
+    cardInfoWrapper.querySelector(".card-info__heading").textContent = cardData.name;
+    cardInfoWrapper.querySelector(".card-info__description").textContent = cardData.description;
+    cardInfoWrapper.querySelector(".card-info__price").textContent = cardData.price + "₽";
     document.body.classList.add("card-none");
     htmlTag.classList.add("card-none");
     cardInfo.classList.add("visible-card-info");
