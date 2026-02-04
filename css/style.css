@@ -403,12 +403,18 @@ main.card-none {
     line-height: 39px;
     letter-spacing: 0px;
 }
-.card-info__description {
+.card-info__description, .card-info__price {
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
     font-size: 1.35em;
-    font-weight: 400;
     letter-spacing: 0px;
+}
+.card-info__description {
+    font-weight: 400;
+}
+.card-info__price {
+    font-weight: 600;
+    margin-top: 15px;
 }
 .card-info__connect {
     display: flex;

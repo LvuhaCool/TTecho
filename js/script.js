@@ -425,18 +425,20 @@ function render() {
     const currentArray = data.slice(shownCardsCount, shownCardsCount + showCardsStep);
     currentArray.forEach((element) => {
         cardsContainer.insertAdjacentHTML("beforeend",
-            `<div class="card">
-                    <div class="card__picture-wrapper">
-                        <img src="${element.img}" alt="${element.alt}" class="card__picture">
-                    </div>
-                    <div class="card__content">
-                        <span class="card__name">${element.name}</span>
-                        <div class="card__prices">
-                            <div class="card__price active">${element.price}₽</div>
-                            <div class="card__price inactive">${element.inactivePrice}</div>
-                        </div>
-                    </div>
-                </div>`
+            `<div class="card" data-id="${element.id}">
+    <div class="card__picture-wrapper">
+        <img src="${element.img}" alt="${element.alt}" class="card__picture">
+    </div>
+    <div class="card__content">
+        <span class="card__name">${element.name}</span>
+        <div class="card__prices">
+            <div class="card__price active">${element.price}₽</div>
+            ${element.inactivePrice
+                ? `<div class="card__price inactive">${element.inactivePrice}</div>`
+                : ""}
+        </div>
+    </div>
+</div>`
         );
     })
     shownCardsCount += showCardsStep;
@@ -465,18 +467,20 @@ function searchRender() {
     data.forEach((element) => {
         if (element.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
             foundCount++;
-            cardsContainer.insertAdjacentHTML("beforeend", `<div class="card">
-                    <div class="card__picture-wrapper">
-                        <img src="${element.img}" alt="${element.alt}" class="card__picture">
-                    </div>
-                    <div class="card__content">
-                        <span class="card__name">${element.name}</span>
-                        <div class="card__prices">
-                            <div class="card__price active">${element.price}₽</div>
-                            <div class="card__price inactive">${element.inactivePrice}</div>
-                        </div>
-                    </div>
-                </div>`);
+            cardsContainer.insertAdjacentHTML("beforeend", `<div class="card" data-id="${element.id}">
+    <div class="card__picture-wrapper">
+        <img src="${element.img}" alt="${element.alt}" class="card__picture">
+    </div>
+    <div class="card__content">
+        <span class="card__name">${element.name}</span>
+        <div class="card__prices">
+            <div class="card__price active">${element.price}₽</div>
+            ${element.inactivePrice
+                ? `<div class="card__price inactive">${element.inactivePrice}</div>`
+                : ""}
+        </div>
+    </div>
+</div>`);
         }
     })
     if (foundCount == 0) {
@@ -532,12 +536,6 @@ function toolTipClick(e) {
     if (!clickedToolTip) {
         return;
     };
-    let cardDescriptionTT;
-    data.forEach((element) => {
-        if (clickedToolTip.querySelector(".tool-tip__img img").src.includes(element.img)) {
-            cardDescriptionTT = element.description;
-        }
-    })
     const cardImageTT = clickedToolTip.querySelector(".tool-tip__img img").src;
     const cardNameTT = clickedToolTip.querySelector(".tool-tip__text").textContent;
     cardInfoWrapper.querySelector(".card-info__img img").src = cardImageTT;
@@ -557,12 +555,13 @@ cardsContainer.addEventListener("click", showCardModal);
 function showCardModal(event) {
     const clickedCard = event.target.closest(".card");
     if (!clickedCard) return;
-    const cardImg = clickedCard.querySelector(".card__picture").src;
-    const cardHeading = clickedCard.querySelector(".card__name").textContent;
-    const cardDescription = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!";
-    cardInfoWrapper.querySelector(".card-info__img img").src = cardImg;
-    cardInfoWrapper.querySelector(".card-info__heading").textContent = cardHeading;
-    cardInfoWrapper.querySelector(".card-info__description").textContent = cardDescription;
+    const cardId = Number(clickedCard.dataset.id);
+    const cardData = data.find(item => item.id === cardId);
+    if (!cardData) return;
+    cardInfoWrapper.querySelector(".card-info__img img").src = cardData.img;
+    cardInfoWrapper.querySelector(".card-info__heading").textContent = cardData.name;
+    cardInfoWrapper.querySelector(".card-info__description").textContent = cardData.description;
+    cardInfoWrapper.querySelector(".card-info__price").textContent = cardData.price + "₽";
     document.body.classList.add("card-none");
     htmlTag.classList.add("card-none");
     cardInfo.classList.add("visible-card-info");
