@@ -7,7 +7,8 @@ const data = [
         alt: "Dignics 05",
         name: "Butterfly Dignics 05",
         price: "8000",
-        inactivePrice: "10000₽"
+        inactivePrice: "10000₽",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 1,
@@ -15,7 +16,8 @@ const data = [
         alt: "Dignics 09c",
         name: "Butterfly Dignics 09c",
         price: "9000",
-        inactivePrice: "11000₽"
+        inactivePrice: "11000₽",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 2,
@@ -23,7 +25,8 @@ const data = [
         alt: "Tenergy 05",
         name: "Butterfly Tenergy 05",
         price: "7000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 3,
@@ -31,7 +34,8 @@ const data = [
         alt: "Tenergy 19",
         name: "Buttefly Tenergy 19",
         price: "9000",
-        inactivePrice: "10000₽"
+        inactivePrice: "10000₽",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 4,
@@ -39,7 +43,8 @@ const data = [
         alt: "Viscaria",
         name: "Butterfly Viscaria",
         price: "15000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 5,
@@ -47,7 +52,8 @@ const data = [
         alt: "Timo Boll ALC",
         name: "Butterfly Timo Boll ALC",
         price: "20000",
-        inactivePrice: "21000₽"
+        inactivePrice: "21000₽",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 6,
@@ -55,7 +61,8 @@ const data = [
         alt: "Timo Boll ZLC",
         name: "Butterfly Timo Boll ZLC",
         price: "21500",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 7,
@@ -63,7 +70,8 @@ const data = [
         alt: "Feint Long III",
         name: "Butterfly Feint Long III",
         price: "9000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 8,
@@ -71,7 +79,8 @@ const data = [
         alt: "Feint Long II",
         name: "Butterfly Feint Long II",
         price: "8000",
-        inactivePrice: "8500₽"
+        inactivePrice: "8500₽",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 9,
@@ -79,7 +88,8 @@ const data = [
         alt: "Mizuno wave drive 9",
         name: "Mizuno wave drive 9",
         price: "12000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 10,
@@ -87,7 +97,8 @@ const data = [
         alt: "Mizuno wave drive neo 3",
         name: "Mizuno wave drive neo 3",
         price: "13000",
-        inactivePrice: "15000₽"
+        inactivePrice: "15000₽",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 11,
@@ -95,7 +106,8 @@ const data = [
         alt: "Zyre 03",
         name: "Butterfly Zyre 03",
         price: "15000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 12,
@@ -103,7 +115,8 @@ const data = [
         alt: "BlueGrip C1",
         name: "Butterfly BlueGrip C1",
         price: "8000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 13,
@@ -111,7 +124,8 @@ const data = [
         alt: "BlueGrip C2",
         name: "Butterfly BlueGrip C2",
         price: "8000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 14,
@@ -119,7 +133,8 @@ const data = [
         alt: "Skachkov Carbon",
         name: "Donic Skachkov Carbon",
         price: "6000",
-        inactivePrice: "6500₽"
+        inactivePrice: "6500₽",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 15,
@@ -127,7 +142,8 @@ const data = [
         alt: "Butterfly Shoe",
         name: "Butterfly Shoe",
         price: "15000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 16,
@@ -135,7 +151,8 @@ const data = [
         alt: "Tenergy 05-FX",
         name: "Butterfly Tenergy 05-FX",
         price: "7500",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 17,
@@ -143,7 +160,8 @@ const data = [
         alt: "Killer",
         name: "Killer шипы",
         price: "4000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 18,
@@ -151,7 +169,8 @@ const data = [
         alt: "Dr. Neubauer KO",
         name: "Dr. Neubauer KO",
         price: "6000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 19,
@@ -159,7 +178,8 @@ const data = [
         alt: "Petr Korbel JP",
         name: "Donic Petr Korbel JP",
         price: "9000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 20,
@@ -167,7 +187,8 @@ const data = [
         alt: "Primorac",
         name: "Donic Primorac",
         price: "10000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 21,
@@ -175,7 +196,8 @@ const data = [
         alt: "Rozena",
         name: "Butterfly Rozena",
         price: "8000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 22,
@@ -183,7 +205,8 @@ const data = [
         alt: "Ovtcharov Carbon",
         name: "Donic Ovtcharov Carbon",
         price: "12000",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 23,
@@ -191,7 +214,8 @@ const data = [
         alt: "Donic Desto",
         name: "Donic Desto",
         price: "4500",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
     {
         id: 24,
@@ -199,7 +223,8 @@ const data = [
         alt: "Donic Waldner",
         name: "Donic Waldner",
         price: "7500",
-        inactivePrice: ""
+        inactivePrice: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!",
     },
 ];
 let shownCardsCount = 0;
@@ -341,21 +366,23 @@ window.addEventListener("resize", HeaderReset);
 if (screen.orientation) {
     screen.orientation.addEventListener("change", HeaderReset);
 }
+let resizeTimer;
+
 function HeaderReset() {
-    searchInput.value = "";
-    cardsContainer.innerHTML = "";
-    foundCount = 0;
-    shownCardsCount = 0;
-    render();
-    noCardsBlock.classList.remove("visible");
-    hamburgerInput.value = "";
-    adaptiveNav.classList.remove("visible");
-    toolTip.forEach((element) => {
-        element.style.display = "none";
-    })
-    toggleContainer.classList.remove("toggle-invisible");
-    header.classList.remove("header-toggle");
-};
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        searchInput.value = "";
+        hamburgerInput.value = "";
+        cardsContainer.innerHTML = "";
+        foundCount = 0;
+        shownCardsCount = 0;
+        render();
+        noCardsBlock.classList.remove("visible");
+        adaptiveNav.classList.remove("visible");
+        toggleContainer.classList.remove("toggle-invisible");
+        header.classList.remove("header-toggle");
+    }, 200);
+}
 // Скрытие подсказок при фокусауте input
 hamburgerInput.addEventListener("focusout", inputHideToolTips);
 hamburgerInput.addEventListener("focus", inputShowToolTips);
@@ -394,9 +421,7 @@ hamburgerInput.addEventListener("keyup", (event) => {
 document.addEventListener("DOMContentLoaded", render);
 showMoreCardsBtn.addEventListener("click", render);
 function render() {
-     if (searchInput.value != "" && cardsContainer.innerHTML != "" || hamburgerInput.value != "" && cardsContainer.innerHTML != "") {
-        cardsContainer.innerHTML = "";
-    }
+    if (searchInput.value || hamburgerInput.value) return;
     const currentArray = data.slice(shownCardsCount, shownCardsCount + showCardsStep);
     currentArray.forEach((element) => {
         cardsContainer.insertAdjacentHTML("beforeend",
@@ -508,12 +533,11 @@ function toolTipClick(e) {
         return;
     };
     let cardDescriptionTT;
-    cardDescriptionTT = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit asperiores dolores similique vel officiis laborum iure consequuntur aliquid veniam a voluptas nesciunt, unde et inventore, mollitia nisi impedit ipsam enim pariatur facere dolorum distinctio! Eveniet asperiores tenetur, aliquid assumenda provident nisi quod quidem voluptatum inventore!";
-    // data.forEach((element) => {
-    //     if (clickedToolTip.querySelector(".tool-tip__img img").src = element.img) {
-    //         cardDescriptionTT = element.description;
-    //     }
-    // })
+    data.forEach((element) => {
+        if (clickedToolTip.querySelector(".tool-tip__img img").src.includes(element.img)) {
+            cardDescriptionTT = element.description;
+        }
+    })
     const cardImageTT = clickedToolTip.querySelector(".tool-tip__img img").src;
     const cardNameTT = clickedToolTip.querySelector(".tool-tip__text").textContent;
     cardInfoWrapper.querySelector(".card-info__img img").src = cardImageTT;
@@ -578,7 +602,7 @@ function sliderEventHandlerForward() {
     changeSlide();
 }
 slider.addEventListener("touchstart", (e) => {
-    touchStartX = e.touches[0].clientX;
+    startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
     startTime = Date.now();
     isDragging = true;
@@ -598,7 +622,7 @@ slider.addEventListener("touchmove", (e) => {
     }
     deltaX = diffX;
     sliderImg.forEach((img, index) => {
-        img.style.transform = `translateX(${(index - currentSliderIndex) * 100}% + ${deltaX}px)`;
+        img.style.transform = `translateX(calc(${(index - currentSliderIndex) * 100}% + ${deltaX}px))`;
     });
 }, { passive: true });
 slider.addEventListener("touchend", () => {
