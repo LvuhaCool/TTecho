@@ -673,6 +673,7 @@ function showCardModal(event) {
 cardInfoHideBtn.addEventListener("click", hideCardInfo);
 function hideCardInfo() {
     inputHideToolTips();
+    hamburgerInput.value = "";
     document.body.classList.remove("card-none");
     htmlTag.classList.remove("card-none");
     cardInfo.classList.remove("visible-card-info");
