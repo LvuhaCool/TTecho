@@ -454,6 +454,14 @@ window.onload = () => {
         img.style.transform = `translateX(${index * 100}%)`;
     });
     changeSlide();
+    accordionOptions.forEach(option => {
+        if (option.classList.contains("visible")) {
+            return false;
+        }
+        else {
+            option.style.opacity = "0";
+        };
+    })
 };
 // Предотвращение багов при изменении размера экрана
 window.addEventListener("resize", HeaderReset);
