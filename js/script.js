@@ -319,14 +319,6 @@ function renderCategory(type) {
         setTimeout(() => {
             closeAccordion();
         }, 100);
-        accordionOptions.forEach(option => {
-        if (option.classList.contains("visible")) {
-            return false;
-        }
-        else {
-            option.style.opacity = "0";
-        };
-    })
     };
 }
 let shownCardsCount = 0;

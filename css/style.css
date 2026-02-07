@@ -144,6 +144,7 @@ main.card-none {
     border-radius: 6px;
     z-index: 100;
     visibility: hidden;
+    opacity: 0;
 }
 .popular-accordion__show-hide:hover {
     opacity: 1;
