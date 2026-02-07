@@ -314,6 +314,11 @@ function renderCategory(type) {
 </div>`
         );
         }
+        if (isMobile) {
+        setTimeout(() => {
+            closeAccordion();
+        }, 100);
+    };
     })
 }
 let shownCardsCount = 0;
@@ -487,9 +492,7 @@ if (hamburgerInput.value == "") {
 function inputHideToolTips() {
     toolTip.forEach((element) => {
         setTimeout(() => {
-            element.forEach((element) => {
-                element.style.display = "none";
-            });
+            element.style.display = "none";
         }, 150);
     })
 }
@@ -672,12 +675,12 @@ function showCardModal(event) {
 };
 cardInfoHideBtn.addEventListener("click", hideCardInfo);
 function hideCardInfo() {
-    inputHideToolTips();
     hamburgerInput.value = "";
     document.body.classList.remove("card-none");
     htmlTag.classList.remove("card-none");
     cardInfo.classList.remove("visible-card-info");
     document.querySelector(".modal-overlay").classList.remove("visible");
+    inputHideToolTips();
 }
 // Движение мячика в футере
 sliderBack.addEventListener("click", sliderEventHandlerBack);
@@ -840,11 +843,6 @@ function foldFunction() {
 function openAccordion() {
     accordionContainer.classList.add("visible");
     accordionOptions.forEach(el => el.classList.add("visible"));
-    if (isMobile) {
-        setTimeout(() => {
-            closeAccordion();
-        }, 100);
-    };
 }
 function closeAccordion() {
     accordionContainer.classList.remove("visible");
