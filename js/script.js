@@ -312,14 +312,14 @@ function renderCategory(type) {
         </div>
     </div>
 </div>`
-        );
+            );
         }
-        if (isMobile) {
-            setTimeout(() => {
-                closeAccordion();
-            }, 100);
-        };
     })
+    if (isMobile) {
+        setTimeout(() => {
+            closeAccordion();
+        }, 100);
+    };
 }
 let shownCardsCount = 0;
 let showCardsStep = 12;

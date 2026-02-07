@@ -166,7 +166,6 @@ main.card-none {
     visibility: hidden;
     cursor: pointer;
     width: fit-content;
-    opacity: 0;
 }
 .popular-accordion__option:hover {
     border-bottom: 0.6px solid var(--primary-color);
