@@ -842,6 +842,7 @@ function foldFunction() {
 // Аккордеон для популярных категорий товаров
 function openAccordion() {
     accordionContainer.classList.add("visible");
+    accordionContainer.style.opacity = "1";
     accordionOptions.forEach(el => el.classList.add("visible"));
 }
 function closeAccordion() {
