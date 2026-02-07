@@ -846,6 +846,7 @@ function openAccordion() {
 }
 function closeAccordion() {
     accordionContainer.classList.remove("visible");
+    accordionContainer.style.opacity = "0";
     accordionOptions.forEach(el => el.classList.remove("visible"));
 }
 accordionTriggerText.addEventListener("mouseenter", openAccordion);
