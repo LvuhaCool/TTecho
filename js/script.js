@@ -840,6 +840,11 @@ function foldFunction() {
 function openAccordion() {
     accordionContainer.classList.add("visible");
     accordionOptions.forEach(el => el.classList.add("visible"));
+    if (isMobile) {
+        setTimeout(() => {
+            closeAccordion();
+        }, 100);
+    };
 }
 function closeAccordion() {
     accordionContainer.classList.remove("visible");
