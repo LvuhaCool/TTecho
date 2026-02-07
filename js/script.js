@@ -315,10 +315,10 @@ function renderCategory(type) {
         );
         }
         if (isMobile) {
-        setTimeout(() => {
-            closeAccordion();
-        }, 100);
-    };
+            setTimeout(() => {
+                closeAccordion();
+            }, 100);
+        };
     })
 }
 let shownCardsCount = 0;
